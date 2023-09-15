@@ -1,1 +1,1 @@
-# online-doctor
+# doctor-app
