@@ -1,0 +1,660 @@
+/* BANNER */
+.banner {
+    background-color: #F5F5F5;
+    width: 1020px;
+}
+
+.banner .container {
+    max-width: 1020px;
+}
+
+.inner-banner-main-div {
+    padding: 15px 30px;
+}
+
+.banner-header p {
+    font-size: 12px;
+}
+
+.content-div img {
+    border-radius: 5px;
+}
+
+.text-div .inner-text-div h4,
+.text-div .inner-text-div p {
+    font-size: 14px;
+}
+
+.text-div .p-tag {
+    font-size: 12px;
+}
+
+/* ICONS */
+
+.icons-div {
+    width: 142px;
+    height: 48px;
+    border-radius: 6px;
+    border: 0.5px solid rgba(0, 0, 3, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-left: 20px;
+}
+
+.icons-div .fa-solid {
+    border-right: 1px solid #989898;
+    padding-right: 20px;
+}
+
+.icons-div .fa-solid:last-of-type {
+    border: unset;
+}
+
+/* BANNER_FOOTER */
+
+.banner-footer {
+    background: #EBEAF1;
+}
+
+.banner-footer-heading {
+    padding-top: 30px;
+}
+
+.banner-btns {
+    padding-bottom: 30px;
+}
+
+.footer-btn {
+    padding-top: 3px;
+}
+
+.banner-btns {
+    border-bottom: 2px solid #989898;
+
+}
+
+.inner-banner-main-div {
+    box-shadow: 0px 3px 25px 0px rgba(194, 196, 205, 0.28);
+    position: relative;
+    z-index: 2;
+}
+
+.inner-search-div {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input.form-control {
+    padding: 10px 50px 10px 10px;
+}
+
+input.form-control:focus {
+    border: 1px solid inherit;
+    box-shadow: unset;
+}
+
+input::placeholder {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.send-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #989898;
+    cursor: pointer;
+}
+
+.footer-search-div {
+    padding: 3px 3px;
+}
+
+.banner .progress-bar-parent {
+    height: calc(100vh - 182px);
+    background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.progress-bar-wrapper {
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    overflow: hidden;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.progress-bar li {
+    float: left;
+    font-size: 11px;
+    line-height: 11px;
+    width: 25%;
+    position: relative;
+    z-index: 1;
+}
+
+.progress-bar li:before {
+    content: "2";
+    font-family: dreamspace;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: red;
+    background: #ffffff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+    border: 2px #d5dbdb solid;
+    padding: 0px 7px 7px 7px;
+}
+
+.progress-bar li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #d5dbdb;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 13px;
+    z-index: -1;
+}
+
+.progress-bar li:last-child:after {
+    display: none;
+}
+
+/* SIGNUP PAGE 1 */
+
+.progress-bar li.active:before {
+    color: #fff;
+    border-color: #8B7FF8;
+    background: #8B7FF8;
+}
+
+.progress-bar li.active:after {
+    background: #8B7FF8;
+}
+
+/* PRESCRIPTIOB_BAR */
+
+.prescription-bar {
+    background: #EBEAF1;
+    width: 420px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.prescription-bar .container {
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.prescription-bar .header {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #BEBEBE;
+}
+
+.prescription-bar .messages-icon-parent-div {
+    margin-top: 27px;
+}
+
+.prescription-bar .nav-pills .nav-link.active,
+.nav-pills {
+    background: none;
+}
+
+.prescription-bar .nav-pills {
+    padding-top: 25px;
+}
+
+.prescription-bar .nav-pills .small-tabs-main-div .nav-link {
+    padding: 0;
+}
+
+.prescription-bar .nav-pills .small-tabs-main-div .span-parent {
+    text-align: center;
+}
+
+.prescription-bar .nav-pills .small-tabs-main-div .span-parent span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: #8B7FF8;
+    font-size: 12px;
+    color: #fff;
+    padding: 1px 2px;
+}
+
+.prescription-bar .nav-pills .small-tabs-main-div .card-text {
+    font-size: 12px;
+    color: black;
+}
+
+.prescription-bar .icons-text {
+    font-size: 12px;
+}
+
+.sclecteds-parent-div {
+
+    height: calc(100vh - 325px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sclected-div {
+    padding-top: 33px;
+}
+
+.diceases-div {
+    background: white;
+    width: 100%;
+    min-height: 15 0px;
+    border-radius: 10px;
+    padding: 17px 23px;
+}
+
+.sclected-buttom-div {
+    padding-top: 23px;
+}
+
+.diceases-buttom-div {
+    background: white;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 10px;
+    padding: 20px 23px;
+}
+
+.advice-btn-div {
+    margin-top: 43px;
+    padding: 9px 106px;
+    border-radius: 10px;
+}
+
+.back-view-btn-div {
+    margin-top: 12px;
+}
+
+.back-view-btn-div .back-btn {
+    padding: 15px 62px;
+    border-radius: 10px;
+}
+
+.back-view-btn-div .view-btn {
+    padding: 3px 26px;
+}
+
+
+* {
+    padding: 0;
+    margin-top: 0;
+}
+
+.profile-side-bar .container {
+    max-width: 372px;
+    margin: 0 auto;
+}
+
+.profile-side-bar {
+    width: 420px;
+    height: 100vh;
+    background: #EBEAF1;
+    padding: 3.5% 24px 24px 24px;
+}
+
+.profile-side-bar .profile-text {
+    padding-top: 20px;
+}
+.profile-side-bar .profile-text h6 {
+    font-size: 22px;
+}
+
+.profile-div {
+    background: #000000;
+    text-align: center;
+    width: 240px;
+    height: 240px;
+    border: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 40px auto 0;
+}
+
+.information-div {
+    padding-top: 40px;
+}
+
+.information-div .content-div h6 {
+    color: #515974;
+    font-size: 16px;
+}
+
+.information-div .content-div h4 {
+    color: #242837;
+    font-size: 18px;
+}
+
+.information-div .content-div p {
+    color: #9796A5;
+    font-size: 12px;
+}
+
+.information-div .icon-div {
+    width: 30px;
+    height: 30px;
+    background: #8B7FF8;
+    border-radius: 08px;
+    text-align: center;
+}
+
+/* PROFILE_BANNER */
+.profile-banner{
+    width: 1020px;
+    height: 100vh;
+}
+
+.profile-banner .header .container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.profile-banner .header .container .inner-container{
+    padding: 8px 0;
+}
+.profile-banner .header .container .inner-container{
+    background-color: #FFFFFF;
+}
+.main-section {
+    margin: 0 auto;
+} 
+.main-section .inner-container{
+    margin-top: 50px;
+}
+.main-section .img-div h3{
+    font-size: 30px;
+}
+.main-section .img-div p{
+    font-size: 15px;
+    color: #8F94A3;
+}
+.img-div{
+    margin-top: 60px;
+}
+@media (max-width:1400px){
+    .profile-side-bar .profile-div{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.side-bar {
+    width: 420px;
+    height: 100vh;
+    background: #E5E3F2;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.nav-pills{
+    --bs-nav-pills-link-active-bg: #8B7FF8;
+}
+.nav{
+    --bs-nav-link-color: #000000;
+}
+.container {
+    max-width: 372px;
+    margin-top: 0 auto;
+}
+
+.header-div {
+    padding-top: 20px;
+}
+
+.search-bar {
+    margin-top: 40px;
+    position: relative;
+}
+.search-bar .form-control{
+    padding-right: 10px;
+    padding-left: 40px;
+    border: none;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    
+    bottom: 13px;
+    left: 14px;
+    color: #989898;
+}
+
+.inner-search-bar {
+    padding: 12px;
+}
+
+.nav-pills {
+    margin-top: 20px;
+    padding: 10px;
+
+}
+
+.dashboard-btn {
+    padding: 13px 42px;
+    color: #000;
+}
+
+.appointment-btn {
+    padding: 13px 17px;
+    color: #000;
+
+}
+
+.small-tabs-main-div {
+    border-radius: 05px;
+}
+
+.inner-small-btn {
+    padding: 12px;
+}
+
+.small-tabs-main-div h5 {
+    font-size: 14px;
+}
+
+.small-tabs-main-div p {
+    font-size: 11px;
+
+}
+
+.patient-detail {
+    margin-top: 30px;
+}
+
+.patient-detail h3 {
+    font-size: 14px;
+    font-weight: 400px;
+}
+
+.patient-detail p {
+    font-size: 12px;
+}
+
+.main-div {
+    border-top: 1px solid #D9D9D9;
+    transition: all 0.3s ease-in-out;
+    padding-right: 15px;
+}
+.main-div:hover{
+    background: #d9d4f8;
+    border-radius: 5px;
+    /* padding: 1px 5px; */
+
+}
+
+.main-div span {
+    border-radius: 50%;
+    background: #8B7FF8;
+    color: white;
+    padding: 0 3px;
+}
+
+.heading {
+    color: black;
+}
+
+/* BANNER */
+.banner {
+    background-color: #F5F5F5;
+    width: 1020px;
+}
+
+.banner .container {
+    max-width: 1020px;
+}
+
+.inner-banner-main-div {
+    padding: 15px 30px;
+}
+
+.banner-header p {
+    font-size: 12px;
+}
+
+.content-div img {
+    border-radius: 5px;
+}
+
+.text-div .inner-text-div h4,
+.text-div .inner-text-div p {
+    font-size: 14px;
+}
+
+.text-div .p-tag {
+    font-size: 12px;
+}
+
+/* ICONS */
+
+.icons-div {
+    width: 142px;
+    height: 48px;
+    border-radius: 6px;
+    border:0.5px solid rgba(0,0,3,0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-left: 20px;
+}
+
+.icons-div .fa-solid {
+    border-right: 1px solid #989898;
+    padding-right: 20px;
+}
+
+.icons-div .fa-solid:last-of-type {
+    border: unset;
+}
+
+
+/* PROGRESS-BAR */
+.progress-bar {
+    /* padding-bottom: 742px; */
+}
+
+/* BANNER_FOOTER */
+
+.banner-footer {
+    background: #EBEAF1;
+    /* position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+        flex: none;
+        order: 3;
+        width: 100%;
+        min-height: var(--height-pane-footer); */
+}
+
+.banner-footer-heading {
+    padding-top: 30px;
+}
+
+.banner-btns {
+    padding-bottom: 30px;
+}
+
+.footer-btn {
+    padding-top: 3px;
+}
+
+.banner-btns {
+    border-bottom: 2px solid #989898;
+
+}
+
+.inner-banner-main-div {
+    box-shadow: 0px 3px 25px 0px rgba(194, 196, 205, 0.28);
+    position: relative;
+    z-index: 2;
+}
+
+.inner-search-div {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input.form-control {
+    padding: 10px 50px 10px 10px;
+}
+
+input.form-control:focus {
+    border: 1px solid inherit;
+    box-shadow: unset;
+}
+
+input::placeholder {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.send-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #989898;
+    cursor: pointer;
+}
+
+.footer-search-div {
+    padding: 3px 3px;
+}
+
+.banner .progress-bar-parent {
+    height: calc(100vh - 182px);
+    background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+

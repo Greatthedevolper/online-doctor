@@ -1,0 +1,232 @@
+@import "./variable";
+
+body {
+  font-family: $sans;
+  &.active {
+    overflow: hidden;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+.h1 {
+  font-size: 30px;
+  line-height: 35px;
+  font-family: $sans;
+  margin: 0;
+  &.small {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+h2.h2 {
+  font-family: $sans;
+  margin: 0;
+
+  &.small {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+}
+h3,
+.h3 {
+  font-family: $sans;
+  margin: 0;
+}
+
+.btn-style {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 181px;
+  height: 50px;
+  border-radius: 10px;
+  background: transparent;
+  color: $black;
+  font-family: $sans;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &.small {
+    width: 68px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    border-radius: 3px;
+  }
+  &.active,
+  &:hover {
+    color: $white;
+    background: $primary;
+    border: 1px solid $primary;
+  }
+  &.new-chat {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    background: $primary;
+    box-shadow: 0px 3px 10px 0px rgba(57, 57, 57, 0.3);
+  }
+  &.next-btn {
+    background: $primary;
+    color: $white;
+    min-width: 223px;
+    height: 72px;
+    padding: 24px 0px;
+  }
+ 
+  &.previous-btn {
+    min-width: 223px;
+    height: 72px;
+    padding: 24px 0px;
+    background: #ebeaf1;
+    &:hover {
+      color: $white;
+      background: $primary;
+      border: 1px solid $primary;
+    }
+  }
+  &.transparent {
+    background: transparent;
+    border: none;
+    color: $purple;
+    justify-content: flex-start;
+    &:hover {
+      background: transparent;
+      color: $purple;
+    }
+  }
+}
+p {
+  font-family: $sans;
+  margin-bottom: 0;
+}
+strong {
+  font-family: $sans;
+}
+
+.dashboard-card {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  padding: 20px 15px;
+  &.purple {
+    background: $purple url("../images/total-patient-bg-img.svg") no-repeat;
+    background-position: 90% 55%;
+  }
+  &.blue {
+    background: $blue url("../images/appointment-bg-image.svg") no-repeat;
+    background-position: 90% 55%;
+  }
+  &.dark-gray {
+    background: $dark-gray url("../images/review-bg-image.svg") no-repeat;
+    background-position: 90% 55%;
+  }
+  p {
+    color: $white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px; /* 100% */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  strong {
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.chat-wrapper {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #dedede;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #8b7ff8;
+  }
+}
+
+.form {
+  .form-group {
+    margin-bottom: 30px;
+    label {
+      color: #818181;
+      font-family: $sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+    .form-control,
+    .form-select {
+      border-radius: 7px;
+      border: 1px solid #d9d9d9;
+      color: #000;
+      font-family: $sans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      height: 50px;
+      &:focus {
+        box-shadow: none;
+        border: 1px solid $purple;
+      }
+    }
+    .special-input-group {
+      display: grid;
+      grid-template-columns: 70px auto;
+      select {
+        border: 1px solid #d9d9d9;
+        border-right: none;
+        border-radius: 7px 0 0 7px;
+        color: #818181;
+        font-family: $sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        outline: none;
+        position: relative;
+        padding-left: 10px;
+        z-index: 1;
+        &:after {
+          content: "|";
+          position: absolute;
+          right: 10px;
+          top: 0;
+        }
+      }
+      .form-control {
+        border-left: none;
+        border-radius: 0 7px 7px 0;
+        &:focus {
+          border: none !important;
+        }
+      }
+      &:has(.form-control:focus) {
+        border: 1px solid $purple;
+        border-radius: 7px;
+      }
+    }
+  }
+}
