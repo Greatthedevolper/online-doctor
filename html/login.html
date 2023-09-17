@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <div class="log-in-main-wrapper">
+      <div class="container-fluid px-0">
+        <div class="row g-0 mx-0">
+          <div class="col-lg-6">
+            <div class="img-wrapper">
+              <img src="../images/login-image.png" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="content-wrapper">
+              <div class="form-wrapper">
+                <h1>Login to Account</h1>
+                <p>Please sign-in to your account and start the adventure.</p>
+                <span>Don't have an account?<a href="#">Register</a></span>
+                <form action="#" class="form">
+                  <div class="form-group">
+                    <label for="">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="123@example.com"
+                    />
+                    <span><i class="fa-regular fa-circle-check"></i></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="********"
+                    />
+                    <span><i class="fa-solid fa-eye-slash"></i></span>
+                    <span><i class="fa-solid fa-eye d-none"></i></span>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <label for="agree" class="agree-wrapper">
+                      <input type="checkbox" id="agree" class="d-none" />
+                      <span><i class="fa-solid fa-check text-white"></i></span>
+                      <strong class="agree-text">Remember Me</strong>
+                    </label>
+
+                    <a href="#" class="forget-password-btn">Forget Password</a>
+                  </div>
+
+                  <input
+                    type="submit"
+                    value="Login"
+                    class="btn-style active w-100"
+                  />
+                </form>
+
+                <div class="or-wrapper">
+                  <p>Or</p>
+                </div>
+                <ul class="social-media-partners">
+                  <li>
+                    <a href="#" class="btn-style facebook-btn">
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <span>Facebook</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="btn-style google-btn">
+                      <i class="fa-brands fa-google"></i>
+                      <span>Google</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="btn-style apple-btn">
+                      <i class="fa-brands fa-apple"></i>
+                      <span>Apple</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
