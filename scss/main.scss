@@ -341,7 +341,74 @@ header {
     }
   }
 }
+.progress-bar-wrapper {
+  width: 380px;
+  position: relative;
+  margin: 0 auto;
+  .progress {
+    height: 3px;
+    width: 300px;
+    position: absolute;
+    top: 9px;
+    left: 30px;
+    margin: 0 auto;
+    --bs-progress-bar-bg: #8b7ff8;
+  }
+  .steps-wrapper {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
+    margin: 40px auto;
+    .step-circle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      &:not(:last-of-type) {
+        margin-right: 50px;
+      }
+      span {
+        width: 20px;
+        height: 20px;
+        background: #e0e0e0;
+        border-radius: 50%;
+        color: #bebebe;
+        font-family: $sans;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+      }
+      strong {
+        color: #bebebe;
+        text-align: center;
+        font-family: $sans;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+      }
+
+      &.active {
+        span {
+          background: #8b7ff8;
+          color: $white;
+        }
+        strong {
+          color: $black;
+        }
+      }
+    }
+  }
+}
 // doctor profile scss start
 .profile-card {
   border-radius: 10px;
@@ -440,9 +507,9 @@ header {
               width: 20px;
               height: 20px;
             }
-            &:hover{
+            &:hover {
               background: $purple;
-              img{
+              img {
                 filter: brightness(0) invert(1);
               }
             }

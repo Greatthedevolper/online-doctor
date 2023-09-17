@@ -5,11 +5,11 @@ $(document).ready(function () {
   });
 });
 
-
 $(document).ready(function () {
   var form = $("#doctor-profile-form");
   var progressBar = $(".progress-bar");
-  var totalSteps = $(".step").length;
+  var totalSteps = $(".doctor-profile-step").length;
+  var stepCircles = $(".step-circle");
 
   form.validate({
     errorClass: "text-danger",
@@ -48,16 +48,17 @@ $(document).ready(function () {
     updateProgressBar(step);
   });
 
-//   function updateProgressBar(step) {
-//     var progress = ((step - 1) / (totalSteps - 1)) * 100;
-//     progressBar.css("width", progress + "%");
-//     progressBar.attr("aria-valuenow", progress);
-//     $(".step-number").text(step); // Update the step number
-//   }
-function updateProgressBar(step) {
-  var progress = (step / totalSteps) * 100;
-  progressBar.css("width", progress + "%");
-  progressBar.attr("aria-valuenow", progress);
-  $(".step-number").text(step); // Update the step number
-}
+  // function updateProgressBar(step) {
+  //   var progress = (step / totalSteps) * 100;
+  //   $(".doctor-profile-page").css("width", progress + "%");
+  //   progressBar.attr("aria-valuenow", progress);
+  //   $(".step-number").text(step); // Update the step number
+  //   $(".step-circle[]");
+  // }
+
+  function updateProgressBar(step) {
+    stepCircles.filter("[data-circle='" + step + "']").addClass("active");
+    var progress = ((step - 1) / 2) * 100;
+    $(".progress-bar").css("width", progress + "%");
+  }
 });
