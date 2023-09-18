@@ -41,6 +41,8 @@ $(document).ready(function () {
     }
   });
 
+  
+
   $(".prev").click(function () {
     var step = $(this).data("step");
     $(".doctor-profile-step").hide();
@@ -60,5 +62,41 @@ $(document).ready(function () {
     stepCircles.filter("[data-circle='" + step + "']").addClass("active");
     var progress = ((step - 1) / 2) * 100;
     $(".progress-bar").css("width", progress + "%");
+  }
+});
+
+
+// Right side bar js
+$(document).ready(function () {
+  var currentStep = 1;
+  var totalSteps = $(".prescription-step").length;
+
+  showStep(currentStep);
+
+  $(".next-step").click(function () {
+    if (currentStep < totalSteps) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+
+  $(".prev-step").click(function () {
+    if (currentStep > 1) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+
+  $("#prescription-form").submit(function (e) {
+    e.preventDefault();
+    alert("Form submitted successfully!");
+  });
+
+  // Function to show the current step and update the indicator
+  function showStep(step) {
+    $(".prescription-step").hide();
+    $(".indicator-step").removeClass("active");
+    $(".prescription-step:nth-child(" + step + ")").show();
+    $(".indicator-step:nth-child(" + step + ")").addClass("active");
   }
 });

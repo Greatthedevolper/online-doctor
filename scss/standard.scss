@@ -6,6 +6,26 @@ body {
     overflow: hidden;
   }
 }
+* {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $purple;
+  }
+}
+@media (min-width: 1920px) {
+  .container-fluid {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
 
 a {
   display: inline-block;

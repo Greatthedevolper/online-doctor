@@ -6,6 +6,23 @@ body.active {
   overflow: hidden;
 }
 
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #7000ff;
+}
+
+@media (min-width: 1920px) {
+  .container-fluid {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
 a {
   display: inline-block;
   text-decoration: none;
@@ -656,6 +673,19 @@ header a.logo img {
 .progress-bar-wrapper .steps-wrapper .step-circle.active strong {
   color: #000;
 }
+.progress-bar-wrapper.appointment-wrapper {
+  width: 545px;
+}
+.progress-bar-wrapper.appointment-wrapper .progress {
+  width: 450px;
+  left: 40px;
+}
+.progress-bar-wrapper.appointment-wrapper .steps-wrapper {
+  margin: unset;
+}
+.progress-bar-wrapper.appointment-wrapper .steps-wrapper .step-circle strong {
+  font-size: 11px;
+}
 
 .profile-card {
   border-radius: 10px;
@@ -763,7 +793,7 @@ header a.logo img {
 
 .log-in-main-wrapper .img-wrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 .log-in-main-wrapper .img-wrapper img {
   object-fit: cover;
@@ -771,13 +801,14 @@ header a.logo img {
   height: 100%;
 }
 .log-in-main-wrapper .content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
 .log-in-main-wrapper .content-wrapper .form-wrapper {
   text-align: center;
+  padding: 178px 10%;
 }
 .log-in-main-wrapper .content-wrapper .form-wrapper h1 {
   color: #142029;
@@ -899,6 +930,10 @@ header a.logo img {
   line-height: 18px;
 }
 
+.appointment-haeder {
+  position: relative;
+  z-index: 4;
+}
 .appointment-haeder .patient-details {
   display: flex;
   align-items: flex-start;
@@ -986,6 +1021,193 @@ header a.logo img {
 }
 .appointment-haeder .action-wrapper li:hover a, .appointment-haeder .action-wrapper li.active a {
   background: #ebeaf1;
+}
+
+.appointment-page-content .main-page .inner-page-wrapper {
+  background: #fff;
+  height: calc(100vh - 130px);
+  position: relative;
+  padding-top: 40px;
+}
+.appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ebeaf1;
+  padding: 30px 0;
+}
+.appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+.appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper .call-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper .call-buttons .btn-style {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+.appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper .call-buttons .btn-style:hover {
+  border: 1px solid #8b7ff8;
+  color: #8b7ff8;
+  background: transparent !important;
+}
+.appointment-page-content .main-page .chat-input-wrapper {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.appointment-page-content .main-page .chat-input-wrapper .button-wraaper {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+.appointment-page-content .main-page .chat-input-wrapper .button-wraaper span {
+  line-height: 0;
+  border-radius: 3px;
+}
+.appointment-page-content .main-page .chat-input-wrapper .input-wrapper {
+  width: 100%;
+  position: relative;
+}
+.appointment-page-content .main-page .chat-input-wrapper .input-wrapper span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  line-height: 0;
+  border-radius: 3px;
+}
+.appointment-page-content .main-page .chat-input-wrapper .input-wrapper .form-control:focus {
+  box-shadow: unset;
+  border: 1px solid #8b7ff8;
+}
+
+.right-sidebar {
+  background: #ebeaf1;
+  padding: 33px 20px;
+}
+.right-sidebar .right-sidebar-header {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #bebebe;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-sidebar .right-sidebar-header h3 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.right-sidebar .prescription-form-wrapper .steps-indicator-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.right-sidebar .prescription-form-wrapper .steps-indicator-wrapper .indicator-step {
+  text-align: center;
+}
+.right-sidebar .prescription-form-wrapper .steps-indicator-wrapper .indicator-step span {
+  margin: 0 auto 5px;
+  width: 20px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bebebe;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  line-height: unset;
+}
+.right-sidebar .prescription-form-wrapper .steps-indicator-wrapper .indicator-step p {
+  color: #bebebe;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.right-sidebar .prescription-form-wrapper .steps-indicator-wrapper .indicator-step.active span {
+  background: #8b7ff8;
+  color: #fff;
+}
+.right-sidebar .prescription-form-wrapper .steps-indicator-wrapper .indicator-step.active P {
+  color: #000;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form {
+  height: calc(100vh - 188px);
+  position: relative;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .compile-btn {
+  background: #8b7ff8;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .step-btn {
+  height: 50px;
+  background: #fff;
+  border-radius: 5px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .inner-div {
+  height: calc(100vh - 300px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .inner-div .selected-wrapper {
+  margin-bottom: 20px;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .inner-div .selected-wrapper strong {
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .inner-div .selected-wrapper .selected {
+  border-radius: 10px;
+  min-height: 160px;
+  background: #fff;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .inner-div .selecting-wrapper strong {
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .inner-div .selecting-wrapper .selecting {
+  border-radius: 10px;
+  min-height: 160px;
+  background: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

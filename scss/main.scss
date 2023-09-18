@@ -408,6 +408,21 @@ header {
       }
     }
   }
+  &.appointment-wrapper {
+    width: 545px;
+    .progress {
+      width: 450px;
+      left: 40px;
+    }
+    .steps-wrapper {
+      margin: unset;
+      .step-circle {
+        strong {
+          font-size: 11px;
+        }
+      }
+    }
+  }
 }
 // doctor profile scss start
 .profile-card {
@@ -525,7 +540,7 @@ header {
 .log-in-main-wrapper {
   .img-wrapper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     img {
       object-fit: cover;
       width: 100%;
@@ -533,12 +548,17 @@ header {
     }
   }
   .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 auto;
+
     .form-wrapper {
       text-align: center;
+      padding: 178px 10%;
       h1 {
         color: #142029;
         font-family: $sans;
@@ -671,6 +691,8 @@ header {
 // book Apoinment page scss start
 
 .appointment-haeder {
+  position: relative;
+  z-index: 4;
   .patient-details {
     display: flex;
     align-items: flex-start;
@@ -766,6 +788,214 @@ header {
       &.active {
         a {
           background: #ebeaf1;
+        }
+      }
+    }
+  }
+}
+.appointment-page-content {
+  .main-page {
+    .inner-page-wrapper {
+      background: $white;
+      height: calc(100vh - 130px);
+      position: relative;
+      padding-top: 40px;
+      .call-permission-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $gray;
+        padding: 30px 0;
+        p {
+          color: $black;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 18px;
+          margin-bottom: 20px;
+        }
+        .call-buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          column-gap: 20px;
+          .btn-style {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            &:hover {
+              border: 1px solid $primary;
+              color: $primary;
+              background: transparent !important;
+            }
+          }
+        }
+      }
+    }
+    .chat-input-wrapper {
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      .button-wraaper {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        span {
+          line-height: 0;
+          border-radius: 3px;
+        }
+      }
+      .input-wrapper {
+        width: 100%;
+        position: relative;
+        span {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 20px;
+          line-height: 0;
+          border-radius: 3px;
+        }
+        .form-control {
+          &:focus {
+            box-shadow: unset;
+            border: 1px solid $primary;
+          }
+        }
+        // &:has(.form-control:focus) {
+        //   span {
+        //     background: red;
+        //     padding: 5px;
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+// right-sidebar scss start
+.right-sidebar {
+  background: $gray;
+  padding: 33px 20px;
+  .right-sidebar-header {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #bebebe;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+      color: $black;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+  }
+  .prescription-form-wrapper {
+    .steps-indicator-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .indicator-step {
+        text-align: center;
+        span {
+          margin: 0 auto 5px;
+          width: 20px;
+          height: 20px;
+          background: #e0e0e0;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #bebebe;
+          font-family: $sans;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 12px;
+          line-height: unset;
+        }
+        p {
+          color: #bebebe;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 12px;
+        }
+        &.active {
+          span {
+            background: #8b7ff8;
+            color: $white;
+          }
+          P {
+            color: $black;
+          }
+        }
+      }
+    }
+    #prescription-form {
+      height: calc(100vh - 188px);
+      position: relative;
+      .prescription-step {
+        .action-div {
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+
+          .compile-btn {
+            background: #8b7ff8;
+            color: $white;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 16px;
+            height: 50px;
+            margin-bottom: 10px;
+          }
+          .step-btn {
+            height: 50px;
+            background: $white;
+            border-radius: 5px;
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+      }
+      .inner-div {
+        height: calc(100vh - 300px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        .selected-wrapper {
+          margin-bottom: 20px;
+          strong {
+            color: $black;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 12px;
+            margin-bottom: 10px;
+            display: inline-block;
+          }
+          .selected {
+            border-radius: 10px;
+            min-height: 160px;
+            background: $white;
+          }
+        }
+        .selecting-wrapper {
+          strong {
+            color: $black;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 12px;
+            margin-bottom: 10px;
+            display: inline-block;
+          }
+          .selecting {
+            border-radius: 10px;
+            min-height: 160px;
+            background: $white;
+          }
         }
       }
     }

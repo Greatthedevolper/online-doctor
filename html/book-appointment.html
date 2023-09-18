@@ -12,7 +12,7 @@
 
   <body>
     <div class="main-wrapper-page">
-      <div class="sidebar">
+      <div class="sidebar d-none">
         <div class="side-bar-header">
           <div class="img-wrapper">
             <img src="../images/profile-1.png" alt="profile-img" />
@@ -257,7 +257,141 @@
           </li>
         </ul>
       </div>
-      <div class="page-content">
+      <div class="right-sidebar">
+        <div class="right-sidebar-header">
+          <h3>Write Prescription</h3>
+          <span role="button"><i class="fa-solid fa-xmark text-dark"></i></span>
+        </div>
+        <div class="prescription-form-wrapper">
+          <ul class="steps-indicator-wrapper">
+            <div class="indicator-step active">
+              <span>1</span>
+              <p>Compliments</p>
+            </div>
+            <div class="indicator-step">
+              <span>2</span>
+              <p>Medicine</p>
+            </div>
+            <div class="indicator-step">
+              <span>3</span>
+              <p>Advice</p>
+            </div>
+            <div class="indicator-step">
+              <span>4</span>
+              <p>Send Prescription</p>
+            </div>
+          </ul>
+          <form id="prescription-form">
+            <!-- step-1 start-->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected"></div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting"></div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <div class="d-flex align-items-center gap-2">
+                  <button type="button" class="btn-style step-btn">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- step-2 start -->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected"></div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting"></div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <div class="d-flex align-items-center gap-2">
+                  <button type="button" class="btn-style step-btn prev-step">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- step-3 start -->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected"></div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting"></div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <div class="d-flex align-items-center gap-2">
+                  <button type="button" class="btn-style step-btn prev-step">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- step-4 start -->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected"></div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting"></div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <div class="d-flex align-items-center gap-2">
+                  <button type="button" class="btn-style step-btn prev-step">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="appointment-page-content">
         <header class="appointment-haeder">
           <div class="container-fluid">
             <div class="row align-items-center">
@@ -268,7 +402,10 @@
                       <img src="../images/profile-1.png" alt="" />
                     </div>
                     <div class="content-wrapper">
-                      <strong class="name">Jaydon Siphron, Age-24, <span>Patient Address</span></strong>
+                      <strong class="name"
+                        >Jaydon Siphron, Age-24,
+                        <span>Patient Address</span></strong
+                      >
                       <p><span>Slot:</span> 11:10 AM/2023-08-30</p>
                       <p>Appointment Datils</p>
                     </div>
@@ -306,9 +443,66 @@
             </div>
           </div>
         </header>
+        <div class="main-page">
+          <div class="inner-page-wrapper">
+            <div class="progress-bar-wrapper appointment-wrapper">
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 0%"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+
+              <ul class="steps-wrapper">
+                <li class="step-circle active" data-circle="1">
+                  <span>1</span>
+                  <strong>Book Appointment</strong>
+                </li>
+                <li class="step-circle" data-circle="2">
+                  <span>2</span>
+                  <strong>Examination</strong>
+                </li>
+                <li class="step-circle" data-circle="3">
+                  <span>3</span>
+                  <strong>Write Prescription</strong>
+                </li>
+                <li class="step-circle" data-circle="4">
+                  <span>4</span>
+                  <strong>Completed Appointment </strong>
+                </li>
+              </ul>
+            </div>
+            <div class="call-permission-wrapper text-center">
+              <p>Patient want to consult with you</p>
+              <div class="call-buttons">
+                <button class="btn-style bg-white">Accept</button>
+                <button class="btn-style active">Reject</button>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-wrapper">
+            <div class="button-wraaper">
+              <span role="button">
+                <img src="../images/icons/mic-icon.svg" alt="" />
+              </span>
+              <span role="button">
+                <img src="../images/icons/attach-file-icon.svg" alt="" />
+              </span>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" />
+              <span role="button">
+                <img src="../images/icons/send-plan-icon.svg" alt="" />
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <header></header>
 
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-3.7.1.min.js"></script>
