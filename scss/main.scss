@@ -17,6 +17,9 @@ header {
 .main-wrapper-page {
   display: grid;
   grid-template-columns: 420px auto;
+  &:has(.right-sidebar.active) {
+    grid-template-columns: auto 420px;
+  }
   .page-content {
     background: $white;
     .mini-dashboard-wrapper {
@@ -111,9 +114,13 @@ header {
   }
 }
 
-.sidebar {
+.left-sidebar {
   background: $gray;
   padding: 20px 24px;
+  display: block;
+  &.active {
+    display: none;
+  }
   .side-bar-header {
     display: flex;
     align-items: center;
@@ -430,6 +437,11 @@ header {
   background: #fff;
   box-shadow: 0px 3px 25px 0px rgba(186, 188, 201, 0.21);
   border: none;
+  .card-body {
+    height: calc(100vh - 215px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   #doctor-profile-form {
     .doctor-profile-step {
       display: none;
@@ -693,6 +705,7 @@ header {
 .appointment-haeder {
   position: relative;
   z-index: 4;
+  padding: 11px 15px;
   .patient-details {
     display: flex;
     align-items: flex-start;
@@ -878,6 +891,10 @@ header {
 .right-sidebar {
   background: $gray;
   padding: 33px 20px;
+  display: none;
+  &.active {
+    display: block;
+  }
   .right-sidebar-header {
     padding-bottom: 18px;
     border-bottom: 1px solid #bebebe;
@@ -960,12 +977,21 @@ header {
             font-weight: 400;
             line-height: 16px;
           }
+          .btn-style {
+            &:active {
+              background: #8b7ff8;
+              color: $white;
+            }
+          }
         }
       }
       .inner-div {
         height: calc(100vh - 300px);
         overflow-y: auto;
         overflow-x: hidden;
+        &.active {
+          display: none;
+        }
         .selected-wrapper {
           margin-bottom: 20px;
           strong {
@@ -980,6 +1006,21 @@ header {
             border-radius: 10px;
             min-height: 160px;
             background: $white;
+            display: flex;
+            column-gap: 8px;
+            flex-wrap: wrap;
+            padding: 11px 20px 20px 10px;
+            .tag {
+              color: $black;
+              font-size: 12px;
+              font-weight: 600;
+              line-height: 12px;
+              min-width: 40px;
+              height: 25px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
         .selecting-wrapper {
@@ -995,6 +1036,216 @@ header {
             border-radius: 10px;
             min-height: 160px;
             background: $white;
+            display: flex;
+            column-gap: 8px;
+            flex-wrap: wrap;
+            padding: 11px 20px 20px 10px;
+            .badge {
+              min-width: 60px;
+              height: 25px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              column-gap: 10px;
+              cursor: pointer;
+              span {
+                color: $white;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 12px;
+              }
+              i {
+              }
+            }
+          }
+        }
+      }
+      .compile-wrapper {
+        background: $white;
+        border-radius: 10px;
+        padding: 20px 18px;
+        height: calc(100vh - 238px);
+        position: absolute;
+        width: 100%;
+        top: -62px;
+        display: none;
+        &.active {
+          display: block;
+        }
+        .search-wrapper {
+          position: relative;
+          span {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            line-height: unset;
+            display: inline-block;
+            &:last-of-type {
+              left: unset;
+              right: 10px;
+            }
+          }
+          .form-control {
+            &.compile-search-input {
+              padding: 10px 32px 16px;
+              border: none;
+              color: #989898;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 12px;
+              &::placeholder {
+                color: #989898;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 12px;
+              }
+              &:focus {
+                box-shadow: none;
+                outline: none;
+              }
+            }
+          }
+        }
+        .content-wrapper {
+          border-top: 0.5px solid #818181;
+          padding-top: 13px;
+          max-height: calc(100% - 37px);
+          overflow-y: auto;
+          overflow-x: hidden;
+
+          .item {
+            padding: 9px 10px;
+            border-radius: 5px;
+            span {
+              color: $black;
+              font-size: 12px;
+              font-weight: 600;
+              line-height: 12px;
+            }
+            &:hover,
+            &:active,
+            &.active {
+              background: #d9d9d9;
+            }
+            &:not(:last-of-type) {
+              margin-bottom: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.appoinment-book-step-wrapper {
+  .book-appoinment-step {
+    .chat-body-wrapper {
+      padding: 30px;
+      height: calc(100vh - 230px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      .chat-item-wrapper {
+        .chat-item {
+          display: flex;
+          align-items: flex-start;
+          column-gap: 24px;
+          .img-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            position: relative;
+            top: -10px;
+            flex: 0 0 50px;
+            img {
+              border-radius: 5px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .content-wrapper {
+            padding: 22px 20px;
+            border-radius: 10px;
+            background: #ebeaf1;
+            display: inline-flex;
+            flex-wrap: wrap;
+            padding: 22px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            &:after {
+              content: "\f04b";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              color: #ebeaf1;
+              position: absolute;
+              top: -1px;
+              left: -9px;
+              font-size: 23px;
+              transform: rotate(61deg);
+            }
+            p {
+              color: $black;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 16px;
+            }
+            small {
+              color: rgba($black, 0.25);
+              font-family: $sans;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 2px;
+            }
+          }
+          .dropdown {
+            position: relative;
+            left: -10px;
+            .dropdown-toggle {
+              width: 20px;
+              height: 13px;
+              border: 1px solid $black;
+              border-radius: 25px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 10px;
+              color: $black;
+              background: transparent;
+              &:after {
+                content: unset;
+              }
+            }
+            .dropdown-menu {
+              padding: 10px 5px;
+              border: none;
+              border-radius: 7px;
+              background: $white;
+              box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.1);
+              .dropdown-item {
+                img {
+                  margin-right: 10px;
+                  width: 16px;
+                  height: 16px;
+                }
+                span {
+                  color: $black;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 14px;
+                }
+              }
+            }
+          }
+          &:not(.doctor) {
+            .dropdown {
+              display: none;
+            }
+          }
+          &:not(:last-of-type) {
+            margin-bottom: 49px;
           }
         }
       }
