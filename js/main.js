@@ -4,9 +4,16 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
   $(".compile-btn").click(function () {
-    $(".compile-wrapper").toggleClass("active");
-    $(".inner-div").toggleClass("active");
+    $(".compile-wrapper").addClass("active");
+    $(".inner-div").addClass("active");
+    $(".done-btn").addClass("active");
     
+  });
+  $(".done-btn").click(function () {
+    $(".compile-wrapper").removeClass("active");
+    $(".inner-div").removeClass("active");
+    $(this).removeClass("active");
+    // $(".compile-btn").removeClass("active");
   });
 
   $(".close-right-sidebar").click(function () {
@@ -245,3 +252,59 @@ $(document).ready(function () {
     });
   });
 });
+
+
+
+  // the below code written by wasim akram  for search tag + functionality
+  $(document).ready(function () {
+    // Reference to the search input field
+    var $searchInput = $(".compile-search-input");
+
+    // Reference to the list of items
+    var $listItems = $(".content-wrapper .item");
+
+    // Reference to the "Add New" button
+    var $addNewButton = $(".no-result-wrapper");
+
+    // Initially, hide the "Add New" button
+    $addNewButton.hide();
+
+    // Function to filter items based on search term
+    function filterItems(searchTerm) {
+      var resultsFound = false;
+
+      $listItems.each(function () {
+        var $span = $(this).find("span");
+        var itemText = $span.text().toLowerCase();
+
+        if (itemText.includes(searchTerm)) {
+          $(this).show();
+          resultsFound = true;
+        } else {
+          $(this).hide();
+        }
+      });
+
+      // Show/hide the "Add New" button based on search results
+      if (resultsFound) {
+        $addNewButton.hide();
+      } else {
+        $addNewButton.show();
+      }
+    }
+
+    // Trigger the input event on page load
+    $searchInput.trigger("input");
+
+    // Attach input event listener
+    $searchInput.on("input", function () {
+      var searchTerm = $(this).val().toLowerCase();
+      filterItems(searchTerm);
+    });
+
+    $(".content-wrapper .item").click(function () {
+      var selected_text = $(this).text();
+      $(".compile-search-input").val(selected_text);
+      $(".compile-search-input").trigger("input");
+    });
+  });

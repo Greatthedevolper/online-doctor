@@ -53,7 +53,7 @@ h1,
   }
 }
 
-h2.h2 {
+h2,.h2 {
   font-family: $sans;
   margin: 0;
 
@@ -151,6 +151,7 @@ p {
 }
 strong {
   font-family: $sans;
+  display: inline-block;
 }
 
 .dashboard-card {

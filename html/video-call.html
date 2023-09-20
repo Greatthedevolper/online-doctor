@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- <link rel="stylesheet" href="../css/app-chat.css" /> -->
+  </head>
+
+  <body>
+    <div class="main-wrapper-page">
+      <div class="appointment-page-content">
+        <header class="appointment-haeder">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <div class="patient-details">
+                  <div class="left-div">
+                    <div class="img-wrapper">
+                      <img src="../images/profile-1.png" alt="" />
+                    </div>
+                    <div class="content-wrapper">
+                      <strong class="name"
+                        >Jaydon Siphron, Age-24,
+                        <span>Patient Address</span></strong
+                      >
+                      <p><span>Slot:</span> 11:10 AM/2023-08-30</p>
+                      <p>Appointment Datils</p>
+                    </div>
+                  </div>
+                  <div class="right-div">
+                    <div class="syptoms">
+                      <p>
+                        Drug Effects, <br />
+                        Illness Information, <br />
+                        Doctor Note,
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 text-end">
+                <ul class="action-wrapper">
+                  <li>
+                    <a href="#">
+                      <img src="../images/icons/book-plus.svg" alt="Book" />
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a href="#">
+                      <img src="../images/icons/camera.svg" alt="Camera" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../images/icons/call.svg" alt="Call" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="main-page">
+          <div class="video-wrapper">
+            <div class="incoming-video">
+              <img src="../images/profile-1.png" alt="" />
+            </div>
+            <div class="outgoing-video">
+              <img src="../images/doctor-profile.png" alt="" />
+            </div>
+            <div class="call-action-btn">
+              <span class="timer">00:14</span>
+              <ul class="btn-wrapper">
+                <li><span><img src="../images/icons/screen-share-icon.svg" alt=""></span></li>
+                <li><span><img src="../images/icons/white-video-icon.svg" alt=""></span></li>
+                <li><span><img src="../images/icons/white-voice-icon.svg" alt=""></span></li>
+                <li><span><img src="../images/icons/call-red-icon.svg" alt=""></span></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="chat-input-wrapper">
+            <div class="button-wraaper">
+              <span role="button">
+                <img src="../images/icons/mic-icon.svg" alt="" />
+              </span>
+              <span role="button">
+                <img src="../images/icons/attach-file-icon.svg" alt="" />
+              </span>
+            </div>
+            <form method="submit" class="input-wrapper" return="false">
+              <input type="text" class="form-control" id="chat-input" />
+              <span role="button" id="chat-input-btn" type="submit">
+                <img src="../images/icons/send-plan-icon.svg" alt="" />
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="right-sidebar active">
+        <div class="right-sidebar-header">
+          <h3>Write Prescription</h3>
+          <span role="button" class="close-right-sidebar"
+            ><i class="fa-solid fa-xmark text-dark"></i
+          ></span>
+        </div>
+        <div class="compile-wrapper">
+          <div class="search-wrapper">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input
+              type="text"
+              class="form-control compile-search-input"
+              placeholder="Add Complaints"
+            />
+            <span><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <ul class="content-wrapper">
+            <div class="no-result-wrapper">
+              <p>Search Empty</p>
+              <button type="button" class="add-new-button" name="button">
+                Add new
+              </button>
+            </div>
+
+            <li class="item active"><span>FIver</span></li>
+            <li class="item"><span>FIver</span></li>
+            <li class="item"><span>upword</span></li>
+            <li class="item"><span>abc</span></li>
+            <li class="item"><span>xyz</span></li>
+            <li class="item"><span>fqs</span></li>
+            <li class="item"><span>Doctor</span></li>
+            <li class="item"><span>patient</span></li>
+            <li class="item"><span>adviser</span></li>
+            <li class="item"><span>prescriptin writer</span></li>
+            <li class="item"><span>admin</span></li>
+            <li class="item"><span>user</span></li>
+          </ul>
+        </div>
+        <div class="prescription-form-wrapper">
+          <ul class="steps-indicator-wrapper">
+            <div class="indicator-step active">
+              <span>1</span>
+              <p>Compliments</p>
+            </div>
+            <div class="indicator-step">
+              <span>2</span>
+              <p>Medicine</p>
+            </div>
+            <div class="indicator-step">
+              <span>3</span>
+              <p>Advice</p>
+            </div>
+            <div class="indicator-step">
+              <span>4</span>
+              <p>Send Prescription</p>
+            </div>
+          </ul>
+
+          <form id="prescription-form">
+            <!-- step-1 start-->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected">
+                    <span class="tag">FIver</span>
+                    <span class="tag">Cough</span>
+                    <span class="tag">Cold</span>
+                  </div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting">
+                    <span class="badge bg-warning">
+                      <span>FIver</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-danger">
+                      <span>Cough</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-primary">
+                      <span>Cold</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <button type="button" class="btn-style done-btn w-100">
+                  Done
+                </button>
+                <div class="d-flex align-items-center gap-2 mt-2">
+                  <button type="button" class="btn-style step-btn">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- step-2 start -->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected">
+                    <span class="tag">FIver</span>
+                    <span class="tag">Cough</span>
+                    <span class="tag">Cold</span>
+                  </div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting">
+                    <span class="badge bg-warning">
+                      <span>FIver</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-danger">
+                      <span>Cough</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-primary">
+                      <span>Cold</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <button type="button" class="btn-style done-btn w-100">
+                  Done
+                </button>
+                <div class="d-flex align-items-center gap-2 mt-2">
+                  <button type="button" class="btn-style step-btn prev-step">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- step-3 start -->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected">
+                    <span class="tag">FIver</span>
+                    <span class="tag">Cough</span>
+                    <span class="tag">Cold</span>
+                  </div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting">
+                    <span class="badge bg-warning">
+                      <span>FIver</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-danger">
+                      <span>Cough</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-primary">
+                      <span>Cold</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <button type="button" class="btn-style done-btn w-100">
+                  Done
+                </button>
+                <div class="d-flex align-items-center gap-2 mt-2">
+                  <button type="button" class="btn-style step-btn prev-step">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- step-4 start -->
+            <div class="prescription-step">
+              <div class="inner-div">
+                <div class="selected-wrapper">
+                  <strong>Selected Compliments</strong>
+                  <div class="selected">
+                    <span class="tag">FIver</span>
+                    <span class="tag">Cough</span>
+                    <span class="tag">Cold</span>
+                  </div>
+                </div>
+                <div class="selecting-wrapper">
+                  <strong>Click on button to Select Compliments</strong>
+                  <div class="selecting">
+                    <span class="badge bg-warning">
+                      <span>FIver</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-danger">
+                      <span>Cough</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <span class="badge bg-primary">
+                      <span>Cold</span>
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="action-div">
+                <button type="button" class="btn-style compile-btn w-100">
+                  Add Compline
+                </button>
+                <button type="button" class="btn-style done-btn w-100">
+                  Done
+                </button>
+                <div class="d-flex align-items-center gap-2 mt-2">
+                  <button type="button" class="btn-style step-btn prev-step">
+                    Previous
+                  </button>
+                  <button type="button" class="btn-style step-btn next-step">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="../js/bootstrap.min.js"></script> -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <!-- <script src="../js/app-chat.js"></script> -->
+
+    <script src="../js/main.js"></script>
+
+    <footer></footer>
+  </body>
+</html>

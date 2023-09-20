@@ -53,11 +53,11 @@ h1.small,
   line-height: 20px;
 }
 
-h2.h2 {
+h2, .h2 {
   font-family: "Open Sans";
   margin: 0;
 }
-h2.h2.small {
+h2.small, .h2.small {
   font-size: 18px;
   font-weight: 600;
   line-height: 18px;
@@ -151,6 +151,7 @@ p {
 
 strong {
   font-family: "Open Sans";
+  display: inline-block;
 }
 
 .dashboard-card {
@@ -319,6 +320,9 @@ header a.logo img {
 .main-wrapper-page .page-content .mini-dashboard-wrapper .dashboard-header {
   margin-bottom: 29px;
 }
+.main-wrapper-page .page-content .mini-dashboard-wrapper .dashboard-header h2 {
+  font-weight: 600;
+}
 .main-wrapper-page .page-content .mini-dashboard-wrapper .dashboard-header .actions-wrapper {
   width: 150px;
   height: 35px;
@@ -335,6 +339,7 @@ header a.logo img {
 }
 .main-wrapper-page .page-content .mini-statics-wrapper h2 {
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .main-wrapper-page .page-content .mini-statics-wrapper .statics-card-wrapper .statics-card {
   width: 100%;
@@ -555,6 +560,11 @@ header a.logo img {
   align-items: center;
   grid-gap: 15px;
   position: relative;
+  cursor: pointer;
+}
+.left-sidebar .chat-wrapper .chat-item:hover, .left-sidebar .chat-wrapper .chat-item.active {
+  background: #d9d9d9;
+  transition: all 0.3s ease-in-out;
 }
 .left-sidebar .chat-wrapper .chat-item:after {
   content: "";
@@ -1019,7 +1029,7 @@ header a.logo img {
   content: "";
   position: absolute;
   background: #ebeaf1;
-  right: 0px;
+  right: -2px;
   top: 50%;
   transform: translateY(-50%);
   height: 60%;
@@ -1032,6 +1042,7 @@ header a.logo img {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
 }
 .appointment-haeder .action-wrapper li a img {
   width: 24px;
@@ -1039,6 +1050,7 @@ header a.logo img {
 }
 .appointment-haeder .action-wrapper li:hover a, .appointment-haeder .action-wrapper li.active a {
   background: #ebeaf1;
+  border: 1px solid transparent;
 }
 
 .appointment-page-content .main-page .inner-page-wrapper {
@@ -1109,11 +1121,119 @@ header a.logo img {
   box-shadow: unset;
   border: 1px solid #8b7ff8;
 }
+.appointment-page-content .main-page .video-wrapper {
+  height: calc(100vh - 130px);
+  position: relative;
+}
+.appointment-page-content .main-page .video-wrapper .incoming-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.appointment-page-content .main-page .video-wrapper .incoming-video img {
+  width: 100%;
+  height: 100%;
+}
+.appointment-page-content .main-page .video-wrapper .outgoing-video {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  right: 30px;
+}
+.appointment-page-content .main-page .audio-wrapper {
+  height: calc(100vh - 130px);
+  border-radius: 15px;
+  background: #8b7ff8;
+  max-width: 100%;
+  position: relative;
+  margin: 10px;
+}
+.appointment-page-content .main-page .audio-wrapper .incoming-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.appointment-page-content .main-page .audio-wrapper .incoming-wrapper .img-wrapper {
+  width: 174px;
+  height: 174px;
+  border-radius: 50%;
+}
+.appointment-page-content .main-page .audio-wrapper .incoming-wrapper .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.appointment-page-content .main-page .audio-wrapper .incoming-wrapper strong {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 20px 0;
+  display: inline-block;
+}
+.appointment-page-content .main-page .audio-wrapper .incoming-wrapper span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  display: inline-block;
+}
+.appointment-page-content .main-page .call-action-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+}
+.appointment-page-content .main-page .call-action-btn .timer {
+  width: 70px;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 0.5px solid #000;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.appointment-page-content .main-page .call-action-btn .btn-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+}
+.appointment-page-content .main-page .call-action-btn .btn-wrapper li:not(:last-of-type) span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
 .right-sidebar {
   background: #ebeaf1;
   padding: 33px 20px;
   display: none;
+  position: relative;
 }
 .right-sidebar.active {
   display: block;
@@ -1186,7 +1306,17 @@ header a.logo img {
   font-weight: 600;
   line-height: 16px;
   height: 50px;
-  margin-bottom: 10px;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .compile-btn.active {
+  display: none;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .done-btn {
+  display: none;
+  background: #8b7ff8;
+  color: #fff;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .done-btn.active {
+  display: block;
 }
 .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .step-btn {
   height: 50px;
@@ -1200,6 +1330,9 @@ header a.logo img {
 .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .btn-style:active {
   background: #8b7ff8;
   color: #fff;
+}
+.right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div:has(.done-btn.active) .compile-btn {
+  display: none;
 }
 .right-sidebar .prescription-form-wrapper #prescription-form .inner-div {
   height: calc(100vh - 300px);
@@ -1272,23 +1405,25 @@ header a.logo img {
   font-weight: 600;
   line-height: 12px;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper {
+.right-sidebar .compile-wrapper {
   background: #fff;
   border-radius: 10px;
   padding: 20px 18px;
   height: calc(100vh - 238px);
   position: absolute;
-  width: 100%;
-  top: -62px;
+  z-index: 3;
+  width: 95%;
+  top: 87px;
+  left: 9px;
   display: none;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper.active {
+.right-sidebar .compile-wrapper.active {
   display: block;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .search-wrapper {
+.right-sidebar .compile-wrapper .search-wrapper {
   position: relative;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .search-wrapper span {
+.right-sidebar .compile-wrapper .search-wrapper span {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -1296,11 +1431,11 @@ header a.logo img {
   line-height: unset;
   display: inline-block;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .search-wrapper span:last-of-type {
+.right-sidebar .compile-wrapper .search-wrapper span:last-of-type {
   left: unset;
   right: 10px;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .search-wrapper .form-control.compile-search-input {
+.right-sidebar .compile-wrapper .search-wrapper .form-control.compile-search-input {
   padding: 10px 32px 16px;
   border: none;
   color: #989898;
@@ -1308,38 +1443,65 @@ header a.logo img {
   font-weight: 400;
   line-height: 12px;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .search-wrapper .form-control.compile-search-input::placeholder {
+.right-sidebar .compile-wrapper .search-wrapper .form-control.compile-search-input::placeholder {
   color: #989898;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .search-wrapper .form-control.compile-search-input:focus {
+.right-sidebar .compile-wrapper .search-wrapper .form-control.compile-search-input:focus {
   box-shadow: none;
   outline: none;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .content-wrapper {
+.right-sidebar .compile-wrapper .content-wrapper {
   border-top: 0.5px solid #818181;
   padding-top: 13px;
   max-height: calc(100% - 37px);
   overflow-y: auto;
   overflow-x: hidden;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .content-wrapper .item {
+.right-sidebar .compile-wrapper .content-wrapper .item {
   padding: 9px 10px;
   border-radius: 5px;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .content-wrapper .item span {
+.right-sidebar .compile-wrapper .content-wrapper .item span {
   color: #000;
   font-size: 12px;
   font-weight: 600;
   line-height: 12px;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .content-wrapper .item:hover, .right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .content-wrapper .item:active, .right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .content-wrapper .item.active {
+.right-sidebar .compile-wrapper .content-wrapper .item:hover, .right-sidebar .compile-wrapper .content-wrapper .item:active, .right-sidebar .compile-wrapper .content-wrapper .item.active {
   background: #d9d9d9;
 }
-.right-sidebar .prescription-form-wrapper #prescription-form .compile-wrapper .content-wrapper .item:not(:last-of-type) {
+.right-sidebar .compile-wrapper .content-wrapper .item:not(:last-of-type) {
   margin-bottom: 6px;
+}
+.right-sidebar .compile-wrapper .content-wrapper .no-result-wrapper {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.right-sidebar .compile-wrapper .content-wrapper .no-result-wrapper p {
+  color: #818181;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.right-sidebar .compile-wrapper .content-wrapper .no-result-wrapper .add-new-button {
+  color: #7000ff;
+  appearance: none;
+  outline: none;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 12px;
+  text-decoration: underline;
 }
 
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper {
