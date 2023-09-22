@@ -7,6 +7,10 @@ header {
   a.logo {
     width: 130px;
     height: 47.185px;
+    @media (max-width: $mobileScreen) {
+      width: 75px;
+      height: 27.222px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -362,6 +366,9 @@ header {
   width: 380px;
   position: relative;
   margin: 0 auto;
+  @media (max-width: $mobileScreen) {
+    width: 100%;
+  }
   .progress {
     height: 3px;
     width: 300px;
@@ -370,6 +377,10 @@ header {
     left: 30px;
     margin: 0 auto;
     --bs-progress-bar-bg: #8b7ff8;
+    @media (max-width: $mobileScreen) {
+      width: 85%;
+      left: 16px;
+    }
   }
   .steps-wrapper {
     margin: 0;
@@ -389,6 +400,9 @@ header {
       gap: 10px;
       &:not(:last-of-type) {
         margin-right: 50px;
+        @media (max-width: $mobileScreen) {
+          margin-right: 26px;
+        }
       }
       span {
         width: 20px;
@@ -412,6 +426,10 @@ header {
         font-size: 12px;
         font-weight: 400;
         line-height: 12px;
+        @media (max-width: $mobileScreen) {
+          font-size: 8px;
+          line-height: 8px;
+        }
       }
 
       &.active {
@@ -447,6 +465,9 @@ header {
   background: #fff;
   box-shadow: 0px 3px 25px 0px rgba(186, 188, 201, 0.21);
   border: none;
+  @media (max-width: $mobileScreen) {
+    box-shadow: unset;
+  }
   .card-body {
     height: calc(100vh - 215px);
     overflow-y: auto;
@@ -462,12 +483,20 @@ header {
         display: grid;
         grid-template-columns: 210px auto 50px;
         grid-gap: 15px;
+        @media (max-width: $mobileScreen) {
+          grid-template-columns: 100%;
+        }
         h3 {
           color: #142029;
           font-size: 20px;
           font-weight: 600;
           line-height: 20px;
           margin-bottom: 30px;
+          @media (max-width: $mobileScreen) {
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 10px;
+          }
         }
         .main-image-wrapper {
           text-align: center;
@@ -477,6 +506,10 @@ header {
             height: 150px;
             border-radius: 7px;
             margin: 0 auto 10px;
+            @media (max-width: $mobileScreen) {
+              width: 100px;
+              height: 100px;
+            }
             img {
               width: 100%;
               height: 100%;
@@ -488,12 +521,22 @@ header {
             height: 35px;
             border-radius: 7px;
             background: #8b7ff8;
+            @media (max-width: $mobileScreen) {
+              width: 100px;
+              height: 30px;
+              font-size: 10px;
+              line-height: 10px;
+            }
           }
         }
         .content-wrapper {
           border-radius: 10px;
           border: 1px solid #d9d9d9;
           padding: 30px 30px;
+          @media (max-width: $mobileScreen) {
+            padding: 25px 15px;
+            border: 0.5px solid #000;
+          }
           &:not(:first-of-type) {
             margin-top: 50px;
           }
@@ -508,6 +551,11 @@ header {
               z-index: 2;
             }
             .form-control {
+              @media (max-width: $mobileScreen) {
+                height: 40px;
+                border-radius: 5px;
+                border: 0.5px solid #000;
+              }
               &:focus {
                 box-shadow: none;
                 border: 1px solid $purple;
@@ -525,6 +573,9 @@ header {
           justify-content: center;
           column-gap: 30px;
           margin-top: 30px;
+          @media (max-width: $mobileScreen) {
+            column-gap: 12px;
+          }
         }
         .form-delete-action-wrapper {
           display: flex;
@@ -532,6 +583,9 @@ header {
           gap: 5px;
           align-items: center;
           justify-content: center;
+          @media (max-width: $mobileScreen) {
+            flex-direction: row;
+          }
           span {
             display: inline-flex;
             align-items: center;
@@ -626,11 +680,10 @@ header {
         font-weight: 400;
         font-size: 18px;
         line-height: 20px;
-        
+
         @media (max-width: $mobileScreen) {
           font-size: 12px;
           line-height: 12px;
-
         }
         a {
           color: #8b7ff8;
@@ -641,7 +694,6 @@ header {
           @media (max-width: $mobileScreen) {
             font-size: 12px;
             line-height: 12px;
-  
           }
         }
       }
@@ -703,7 +755,7 @@ header {
           font-weight: 600;
           line-height: 24px;
           @media (max-width: $mobileScreen) {
-            margin: 20px 0 ;
+            margin: 20px 0;
             font-size: 18px;
             line-height: 18px;
           }
@@ -744,7 +796,6 @@ header {
           margin-top: 20px;
           justify-content: center;
           column-gap: 15px;
-
         }
         li {
           a.btn-style {

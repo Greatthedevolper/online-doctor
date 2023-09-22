@@ -51,6 +51,11 @@ h1,
     font-size: 20px;
     font-weight: 600;
     line-height: 20px;
+
+    @media (max-width: $mobileScreen) {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 }
 
@@ -114,6 +119,11 @@ h3,
     min-width: 223px;
     height: 72px;
     padding: 24px 0px;
+     @media (max-width: $mobileScreen) {
+      min-width: 152px;
+      height: 45px;
+      border-radius: 5px;
+     }
   }
 
   &.previous-btn {
@@ -121,6 +131,11 @@ h3,
     height: 72px;
     padding: 24px 0px;
     background: #ebeaf1;
+     @media (max-width: $mobileScreen) {
+      min-width: 152px;
+      height: 45px;
+      border-radius: 5px;
+     }
     &:hover {
       color: $white;
       background: $primary;
