@@ -46,6 +46,7 @@ h1,
   line-height: 35px;
   font-family: $sans;
   margin: 0;
+
   &.small {
     font-size: 20px;
     font-weight: 600;
@@ -53,7 +54,8 @@ h1,
   }
 }
 
-h2,.h2 {
+h2,
+.h2 {
   font-family: $sans;
   margin: 0;
 
@@ -222,6 +224,10 @@ strong {
       font-weight: 400;
       line-height: 16px;
       height: 50px;
+      @media (max-width: $mobileScreen) {
+        height: 55px;
+        border-radius: 10px;
+      }
       &:focus {
         box-shadow: none;
         border: 1px solid $purple;
@@ -281,6 +287,13 @@ strong {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: $mobileScreen) {
+        width: 15px;
+        height: 15px;
+        i {
+          font-size: 10px;
+        }
+      }
     }
 
     strong {
@@ -290,6 +303,10 @@ strong {
       font-style: normal;
       font-weight: 400;
       line-height: 30px;
+      @media (max-width: $mobileScreen) {
+        font-size: 12px;
+        line-height: 12px;
+      }
     }
   }
 }

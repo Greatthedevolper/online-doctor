@@ -563,10 +563,17 @@ header {
   .img-wrapper {
     width: 100%;
     height: 100vh;
+    @media (max-width: $mobileScreen) {
+      height: 309px;
+      border-radius: 0 0 20px 20px;
+    }
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
+      @media (max-width: $mobileScreen) {
+        border-radius: 0 0 20px 20px;
+      }
     }
   }
   .content-wrapper {
@@ -577,16 +584,26 @@ header {
     overflow-y: auto;
     overflow-x: hidden;
     margin: 0 auto;
+    @media (max-width: $mobileScreen) {
+      height: unset;
+    }
 
     .form-wrapper {
       text-align: center;
       padding: 178px 10%;
+      @media (max-width: $mobileScreen) {
+        padding: 20px 20px;
+      }
       h1 {
         color: #142029;
-        font-family: $sans;
         font-size: 38px;
         font-weight: 700;
         line-height: 38px;
+        @media (max-width: $mobileScreen) {
+          font-size: 24px;
+          line-height: 30px;
+          font-weight: 600;
+        }
       }
       p {
         color: #142029;
@@ -595,24 +612,44 @@ header {
         font-weight: 400;
         line-height: 35px;
         margin: 15px 0 30px;
+        @media (max-width: $mobileScreen) {
+          margin: 10px 0 24px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+        }
       }
       span {
         display: block;
         color: #142029;
         font-family: $sans;
-        font-size: 18px;
         font-weight: 400;
+        font-size: 18px;
         line-height: 20px;
+        
+        @media (max-width: $mobileScreen) {
+          font-size: 12px;
+          line-height: 12px;
+
+        }
         a {
           color: #8b7ff8;
           font-size: 18px;
           font-weight: 600;
           line-height: 20px;
           text-decoration-line: underline;
+          @media (max-width: $mobileScreen) {
+            font-size: 12px;
+            line-height: 12px;
+  
+          }
         }
       }
       .form {
         margin-top: 45px;
+        @media (max-width: $mobileScreen) {
+          margin-top: 20px;
+        }
         .form-group {
           position: relative;
           label {
@@ -625,6 +662,9 @@ header {
           }
           .form-control {
             height: 60px;
+            @media (max-width: $mobileScreen) {
+              height: 55px;
+            }
             &:focus {
               box-shadow: none;
               border: 1px solid $purple;
@@ -652,12 +692,21 @@ header {
           line-height: 30px;
           text-decoration-line: underline;
           display: inline-block;
+          @media (max-width: $mobileScreen) {
+            font-size: 12px;
+            line-height: 12px;
+          }
         }
         .btn-style {
           margin: 40px 0 30px;
           font-size: 24px;
           font-weight: 600;
           line-height: 24px;
+          @media (max-width: $mobileScreen) {
+            margin: 20px 0 ;
+            font-size: 18px;
+            line-height: 18px;
+          }
         }
       }
       .or-wrapper {
@@ -681,6 +730,9 @@ header {
           padding: 0 10px;
           display: inline-block;
           margin: 0;
+          @media (max-width: $mobileScreen) {
+            font-size: 14px;
+          }
         }
       }
       .social-media-partners {
@@ -688,20 +740,36 @@ header {
         align-items: center;
         column-gap: 20px;
         margin-top: 40px;
+        @media (max-width: $mobileScreen) {
+          margin-top: 20px;
+          justify-content: center;
+          column-gap: 15px;
+
+        }
         li {
           a.btn-style {
             width: 153.333px;
             height: 60px;
             column-gap: 10px;
+            @media (max-width: $mobileScreen) {
+              width: 48px;
+              height: 40px;
+            }
             i {
               font-size: 25px;
               color: #fff;
+              @media (max-width: $mobileScreen) {
+                font-size: 18px;
+              }
             }
             span {
               color: #fff;
               font-size: 18px;
               font-weight: 600;
               line-height: 18px;
+              @media (max-width: $mobileScreen) {
+                display: none;
+              }
             }
           }
         }
