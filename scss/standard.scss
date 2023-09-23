@@ -325,3 +325,15 @@ strong {
     }
   }
 }
+
+
+.back-arrow{
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  @media (max-width: $mobileScreen) {
+    display: block;
+  }
+}

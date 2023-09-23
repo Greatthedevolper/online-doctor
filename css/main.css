@@ -335,6 +335,19 @@ strong {
   }
 }
 
+.back-arrow {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+@media (max-width: 767px) {
+  .back-arrow {
+    display: block;
+  }
+}
+
 header {
   padding: 11px 0;
   background: #fff;
@@ -458,6 +471,11 @@ header a.logo img {
   background: #ebeaf1;
   padding: 20px 24px;
   display: block;
+}
+@media (max-width: 767px) {
+  .left-sidebar {
+    display: none;
+  }
 }
 .left-sidebar.active {
   display: none;
@@ -769,17 +787,43 @@ header a.logo img {
   color: #000;
 }
 .progress-bar-wrapper.appointment-wrapper {
-  width: 545px;
+  width: 340px;
+}
+@media (max-width: 767px) {
+  .progress-bar-wrapper.appointment-wrapper {
+    width: 100%;
+  }
 }
 .progress-bar-wrapper.appointment-wrapper .progress {
   width: 450px;
   left: 40px;
 }
+@media (max-width: 767px) {
+  .progress-bar-wrapper.appointment-wrapper .progress {
+    width: 300px;
+  }
+}
 .progress-bar-wrapper.appointment-wrapper .steps-wrapper {
   margin: unset;
 }
+@media (max-width: 767px) {
+  .progress-bar-wrapper.appointment-wrapper .steps-wrapper {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .progress-bar-wrapper.appointment-wrapper .steps-wrapper .step-circle {
+    margin-right: 21px;
+  }
+}
 .progress-bar-wrapper.appointment-wrapper .steps-wrapper .step-circle strong {
   font-size: 11px;
+}
+@media (max-width: 767px) {
+  .progress-bar-wrapper.appointment-wrapper .steps-wrapper .step-circle strong {
+    font-size: 8px;
+    line-height: 8px;
+  }
 }
 
 .profile-card {
@@ -1192,15 +1236,35 @@ header a.logo img {
   align-items: flex-start;
   column-gap: 20px;
 }
+@media (max-width: 767px) {
+  .appointment-haeder .patient-details {
+    flex-direction: column;
+  }
+}
 .appointment-haeder .patient-details .left-div {
   display: flex;
   align-items: flex-start;
   column-gap: 10px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .appointment-haeder .patient-details .left-div {
+    border-bottom: 1px solid #818181;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+  }
 }
 .appointment-haeder .patient-details .left-div .img-wrapper {
   width: 50px;
   height: 50px;
   border-radius: 4px;
+}
+@media (max-width: 767px) {
+  .appointment-haeder .patient-details .left-div .img-wrapper {
+    width: 30px;
+    height: 30px;
+  }
 }
 .appointment-haeder .patient-details .left-div .img-wrapper img {
   width: 100%;
@@ -1215,6 +1279,12 @@ header a.logo img {
   font-weight: 600;
   line-height: 14px;
 }
+@media (max-width: 767px) {
+  .appointment-haeder .patient-details .left-div .content-wrapper .name {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
 .appointment-haeder .patient-details .left-div .content-wrapper .name span {
   color: #000;
   font-family: "Open Sans";
@@ -1222,12 +1292,24 @@ header a.logo img {
   font-weight: 400;
   line-height: 14px;
 }
+@media (max-width: 767px) {
+  .appointment-haeder .patient-details .left-div .content-wrapper .name span {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
 .appointment-haeder .patient-details .left-div .content-wrapper p {
   color: #818181;
   font-family: "Open Sans";
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
+}
+@media (max-width: 767px) {
+  .appointment-haeder .patient-details .left-div .content-wrapper p {
+    font-size: 8px;
+    line-height: 8px;
+  }
 }
 .appointment-haeder .patient-details .left-div .content-wrapper p span {
   font-weight: 700;
@@ -1239,6 +1321,15 @@ header a.logo img {
   font-weight: 400;
   line-height: 16px;
 }
+@media (max-width: 767px) {
+  .appointment-haeder .patient-details .right-div p {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .appointment-haeder .patient-details .right-div p br {
+    display: none;
+  }
+}
 .appointment-haeder .action-wrapper {
   display: flex;
   align-items: center;
@@ -1246,6 +1337,11 @@ header a.logo img {
   border: 0.5px solid #ebeaf1;
   width: 192px;
   margin-left: auto;
+}
+@media (max-width: 767px) {
+  .appointment-haeder .action-wrapper {
+    width: 102px;
+  }
 }
 .appointment-haeder .action-wrapper li:not(:last-of-type) a {
   position: relative;
@@ -1269,9 +1365,21 @@ header a.logo img {
   transition: all 0.3s ease-in-out;
   border: 1px solid transparent;
 }
+@media (max-width: 767px) {
+  .appointment-haeder .action-wrapper li a {
+    width: 34px;
+    height: 30px;
+  }
+}
 .appointment-haeder .action-wrapper li a img {
   width: 24px;
   height: 24px;
+}
+@media (max-width: 767px) {
+  .appointment-haeder .action-wrapper li a img {
+    width: 14px;
+    height: 14px;
+  }
 }
 .appointment-haeder .action-wrapper li:hover a, .appointment-haeder .action-wrapper li.active a {
   background: #ebeaf1;
@@ -1283,6 +1391,11 @@ header a.logo img {
   height: calc(100vh - 130px);
   position: relative;
   padding-top: 40px;
+}
+@media (max-width: 767px) {
+  .appointment-page-content .main-page .inner-page-wrapper {
+    height: calc(100vh - 145px);
+  }
 }
 .appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper {
   position: absolute;
@@ -1299,6 +1412,12 @@ header a.logo img {
   line-height: 18px;
   margin-bottom: 20px;
 }
+@media (max-width: 767px) {
+  .appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper p {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
 .appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper .call-buttons {
   display: flex;
   align-items: center;
@@ -1309,6 +1428,13 @@ header a.logo img {
   width: 100px;
   height: 40px;
   border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper .call-buttons .btn-style {
+    width: 70px;
+    height: 25px;
+    font-size: 10px;
+  }
 }
 .appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper .call-buttons .btn-style:hover {
   border: 1px solid #8b7ff8;
@@ -1325,6 +1451,11 @@ header a.logo img {
   display: flex;
   align-items: center;
   column-gap: 40px;
+}
+@media (max-width: 767px) {
+  .appointment-page-content .main-page .chat-input-wrapper .button-wraaper {
+    column-gap: 20px;
+  }
 }
 .appointment-page-content .main-page .chat-input-wrapper .button-wraaper span {
   line-height: 0;
