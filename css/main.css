@@ -805,7 +805,9 @@ header a.logo img {
 }
 @media (max-width: 767px) {
   .progress-bar-wrapper.appointment-wrapper .progress {
-    width: 278px;
+    width: 71%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .progress-bar-wrapper.appointment-wrapper .steps-wrapper {
@@ -1876,6 +1878,11 @@ header a.logo img {
   align-items: flex-start;
   column-gap: 24px;
 }
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item {
+    column-gap: 12px;
+  }
+}
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .img-wrapper {
   width: 50px;
   height: 50px;
@@ -1884,6 +1891,14 @@ header a.logo img {
   top: -10px;
   flex: 0 0 50px;
 }
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .img-wrapper {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    top: -5px;
+  }
+}
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .img-wrapper img {
   border-radius: 5px;
   width: 100%;
@@ -1891,16 +1906,19 @@ header a.logo img {
   object-fit: cover;
 }
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper {
-  padding: 22px 20px;
   border-radius: 10px;
   background: #ebeaf1;
   display: inline-flex;
-  flex-wrap: wrap;
   padding: 22px 20px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   position: relative;
+}
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper {
+    padding: 10px 11px;
+  }
 }
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper:after {
   content: "\f04b";
@@ -1913,11 +1931,24 @@ header a.logo img {
   font-size: 23px;
   transform: rotate(61deg);
 }
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper:after {
+    font-size: 14px;
+    top: 2px;
+    left: -7px;
+  }
+}
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper p {
   color: #000;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper p {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper small {
   color: rgba(0, 0, 0, 0.25);
@@ -1926,9 +1957,20 @@ header a.logo img {
   font-weight: 400;
   line-height: 2px;
 }
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .content-wrapper small {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .dropdown {
   position: relative;
   left: -10px;
+}
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .dropdown {
+    left: -5px;
+  }
 }
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .dropdown .dropdown-toggle {
   width: 20px;
@@ -1952,6 +1994,11 @@ header a.logo img {
   background: #fff;
   box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .dropdown .dropdown-menu .dropdown-item {
+    padding: 5px;
+  }
+}
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .dropdown .dropdown-menu .dropdown-item img {
   margin-right: 10px;
   width: 16px;
@@ -1962,6 +2009,12 @@ header a.logo img {
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
+}
+@media (max-width: 767px) {
+  .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item .dropdown .dropdown-menu .dropdown-item span {
+    font-size: 12px;
+    line-height: 10px;
+  }
 }
 .appoinment-book-step-wrapper .book-appoinment-step .chat-body-wrapper .chat-item-wrapper .chat-item:not(.doctor) .dropdown {
   display: none;

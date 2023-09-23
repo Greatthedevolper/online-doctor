@@ -21,7 +21,7 @@ header {
 .main-wrapper-page {
   display: grid;
   grid-template-columns: 420px auto;
- @media (max-width: $mobileScreen) {
+  @media (max-width: $mobileScreen) {
     grid-template-columns: auto;
   }
   &:has(.right-sidebar.active) {
@@ -451,33 +451,35 @@ header {
   }
   &.appointment-wrapper {
     width: 544px;
-     @media (max-width: $mobileScreen) {
+    @media (max-width: $mobileScreen) {
       width: 100%;
-     }
+    }
     .progress {
       width: 450px;
       left: 40px;
-       @media (max-width: $mobileScreen) {
-        width: 278px;
-       }
+      @media (max-width: $mobileScreen) {
+        width: calc(100% - 29%);
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
     .steps-wrapper {
       margin: unset;
-       @media (max-width: $mobileScreen) {
+      @media (max-width: $mobileScreen) {
         justify-content: center;
-       }
+      }
       .step-circle {
-        &:not(:last-of-type){
-         @media (max-width: $mobileScreen) {
-          margin-right: 21px;
-         }
+        &:not(:last-of-type) {
+          @media (max-width: $mobileScreen) {
+            margin-right: 21px;
+          }
         }
         strong {
           font-size: 11px;
-           @media (max-width: $mobileScreen) {
+          @media (max-width: $mobileScreen) {
             font-size: 8px;
             line-height: 8px;
-           }
+          }
         }
       }
     }
@@ -956,10 +958,10 @@ header {
     border: 0.5px solid #ebeaf1;
     width: 192px;
     margin-left: auto;
-     @media (max-width: $mobileScreen) {
+    @media (max-width: $mobileScreen) {
       width: 102px;
       // margin-left: unset;
-     }
+    }
     li {
       &:not(:last-of-type) {
         a {
@@ -984,17 +986,17 @@ header {
         justify-content: center;
         transition: all 0.3s ease-in-out;
         border: 1px solid transparent;
-         @media (max-width: $mobileScreen) {
+        @media (max-width: $mobileScreen) {
           width: 34px;
           height: 30px;
-         }
+        }
         img {
           width: 24px;
           height: 24px;
-           @media (max-width: $mobileScreen) {
+          @media (max-width: $mobileScreen) {
             width: 14px;
             height: 14px;
-           }
+          }
         }
       }
       &:hover,
@@ -1015,9 +1017,8 @@ header {
       position: relative;
       padding-top: 40px;
       @media (max-width: $mobileScreen) {
-        
         height: calc(100vh - 161px);
-       }
+      }
       .call-permission-wrapper {
         position: absolute;
         bottom: 0;
@@ -1031,10 +1032,10 @@ header {
           font-weight: 600;
           line-height: 18px;
           margin-bottom: 20px;
-           @media (max-width: $mobileScreen) {
+          @media (max-width: $mobileScreen) {
             font-size: 10px;
             line-height: 10px;
-           }
+          }
         }
         .call-buttons {
           display: flex;
@@ -1045,11 +1046,11 @@ header {
             width: 100px;
             height: 40px;
             border-radius: 5px;
-             @media (max-width: $mobileScreen) {
+            @media (max-width: $mobileScreen) {
               width: 70px;
               height: 25px;
               font-size: 10px;
-             }
+            }
             &:hover {
               border: 1px solid $primary;
               color: $primary;
@@ -1068,9 +1069,9 @@ header {
         display: flex;
         align-items: center;
         column-gap: 40px;
-         @media (max-width: $mobileScreen) {
+        @media (max-width: $mobileScreen) {
           column-gap: 20px;
-         }
+        }
         span {
           line-height: 0;
           border-radius: 3px;
@@ -1523,6 +1524,9 @@ header {
           display: flex;
           align-items: flex-start;
           column-gap: 24px;
+          @media (max-width: $mobileScreen) {
+            column-gap: 12px;
+          }
           .img-wrapper {
             width: 50px;
             height: 50px;
@@ -1530,6 +1534,12 @@ header {
             position: relative;
             top: -10px;
             flex: 0 0 50px;
+            @media (max-width: $mobileScreen) {
+              flex: 0 0 30px;
+              width: 30px;
+              height: 30px;
+              top: -5px;
+            }
             img {
               border-radius: 5px;
               width: 100%;
@@ -1538,16 +1548,18 @@ header {
             }
           }
           .content-wrapper {
-            padding: 22px 20px;
             border-radius: 10px;
             background: #ebeaf1;
             display: inline-flex;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
             padding: 22px 20px;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
             position: relative;
+            @media (max-width: $mobileScreen) {
+              padding: 10px 11px;
+            }
             &:after {
               content: "\f04b";
               font-family: "Font Awesome 5 Free";
@@ -1558,12 +1570,21 @@ header {
               left: -9px;
               font-size: 23px;
               transform: rotate(61deg);
+              @media (max-width: $mobileScreen) {
+                font-size: 14px;
+                top: 2px;
+                left: -7px;
+              }
             }
             p {
               color: $black;
               font-size: 16px;
               font-weight: 400;
               line-height: 16px;
+              @media (max-width: $mobileScreen) {
+                font-size: 12px;
+                line-height: 12px;
+              }
             }
             small {
               color: rgba($black, 0.25);
@@ -1571,11 +1592,18 @@ header {
               font-size: 12px;
               font-weight: 400;
               line-height: 2px;
+              @media (max-width: $mobileScreen) {
+                font-size: 8px;
+                line-height: 8px;
+              }
             }
           }
           .dropdown {
             position: relative;
             left: -10px;
+             @media (max-width: $mobileScreen) {
+              left: -5px;
+             }
             .dropdown-toggle {
               width: 20px;
               height: 13px;
@@ -1598,16 +1626,24 @@ header {
               background: $white;
               box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.1);
               .dropdown-item {
+                 @media (max-width: $mobileScreen) {
+                  padding: 5px ;
+                 }
                 img {
                   margin-right: 10px;
                   width: 16px;
                   height: 16px;
+                   
                 }
                 span {
                   color: $black;
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 14px;
+                   @media (max-width: $mobileScreen) {
+                    font-size: 12px;
+                    line-height: 10px;
+                   }
                 }
               }
             }
