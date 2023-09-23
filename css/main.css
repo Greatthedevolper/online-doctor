@@ -372,6 +372,11 @@ header a.logo img {
   display: grid;
   grid-template-columns: 420px auto;
 }
+@media (max-width: 767px) {
+  .main-wrapper-page {
+    grid-template-columns: auto;
+  }
+}
 .main-wrapper-page:has(.right-sidebar.active) {
   grid-template-columns: auto 420px;
 }
@@ -787,7 +792,7 @@ header a.logo img {
   color: #000;
 }
 .progress-bar-wrapper.appointment-wrapper {
-  width: 340px;
+  width: 544px;
 }
 @media (max-width: 767px) {
   .progress-bar-wrapper.appointment-wrapper {
@@ -800,7 +805,7 @@ header a.logo img {
 }
 @media (max-width: 767px) {
   .progress-bar-wrapper.appointment-wrapper .progress {
-    width: 300px;
+    width: 278px;
   }
 }
 .progress-bar-wrapper.appointment-wrapper .steps-wrapper {
@@ -812,7 +817,7 @@ header a.logo img {
   }
 }
 @media (max-width: 767px) {
-  .progress-bar-wrapper.appointment-wrapper .steps-wrapper .step-circle {
+  .progress-bar-wrapper.appointment-wrapper .steps-wrapper .step-circle:not(:last-of-type) {
     margin-right: 21px;
   }
 }

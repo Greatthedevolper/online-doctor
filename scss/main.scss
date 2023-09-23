@@ -21,6 +21,9 @@ header {
 .main-wrapper-page {
   display: grid;
   grid-template-columns: 420px auto;
+ @media (max-width: $mobileScreen) {
+    grid-template-columns: auto;
+  }
   &:has(.right-sidebar.active) {
     grid-template-columns: auto 420px;
   }
@@ -447,7 +450,7 @@ header {
     }
   }
   &.appointment-wrapper {
-    width: 340px;
+    width: 544px;
      @media (max-width: $mobileScreen) {
       width: 100%;
      }
@@ -455,7 +458,7 @@ header {
       width: 450px;
       left: 40px;
        @media (max-width: $mobileScreen) {
-        width: 300px;
+        width: 278px;
        }
     }
     .steps-wrapper {
@@ -464,9 +467,11 @@ header {
         justify-content: center;
        }
       .step-circle {
+        &:not(:last-of-type){
          @media (max-width: $mobileScreen) {
           margin-right: 21px;
          }
+        }
         strong {
           font-size: 11px;
            @media (max-width: $mobileScreen) {
