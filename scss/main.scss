@@ -26,6 +26,9 @@ header {
   }
   &:has(.right-sidebar.active) {
     grid-template-columns: auto 420px;
+    @media (max-width: $mobileScreen) {
+      grid-template-columns: auto;
+    }
   }
   .page-content {
     background: $white;
@@ -479,6 +482,7 @@ header {
           @media (max-width: $mobileScreen) {
             font-size: 8px;
             line-height: 8px;
+            height: 16px;
           }
         }
       }
@@ -1017,7 +1021,7 @@ header {
       position: relative;
       padding-top: 40px;
       @media (max-width: $mobileScreen) {
-        height: calc(100vh - 161px);
+        height: calc(100vh - 142px);
       }
       .call-permission-wrapper {
         position: absolute;
@@ -1103,8 +1107,9 @@ header {
       }
     }
     .video-wrapper {
-      height: calc(100vh - 130px);
+      height: calc(100vh - 150px);
       position: relative;
+      padding: 15px 15px 0;
       .incoming-video {
         position: relative;
         width: 100%;
@@ -1123,7 +1128,7 @@ header {
       }
     }
     .audio-wrapper {
-      height: calc(100vh - 130px);
+      height: calc(100vh - 165px);
       border-radius: 15px;
       background: #8b7ff8;
       max-width: 100%;
@@ -1134,14 +1139,17 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
         .img-wrapper {
           width: 174px;
           height: 174px;
           border-radius: 50%;
+          margin: 0 auto;
           img {
             width: 100%;
             height: 100%;
@@ -1154,7 +1162,7 @@ header {
           font-weight: 600;
           line-height: 28px;
           margin: 20px 0;
-          display: inline-block;
+          display: block;
         }
         span {
           color: $white;
@@ -1288,6 +1296,7 @@ header {
           position: absolute;
           bottom: -15px;
           left: 0;
+          right: 0;
 
           .compile-btn {
             background: #8b7ff8;
@@ -1296,6 +1305,11 @@ header {
             font-weight: 600;
             line-height: 16px;
             height: 50px;
+            @media (max-width: $mobileScreen) {
+              border-radius: 5px;
+              height: 45px;
+              max-width: 100% !important;
+            }
             &.active {
               display: none;
             }
@@ -1304,6 +1318,11 @@ header {
             display: none;
             background: #8b7ff8;
             color: $white;
+            @media (max-width: $mobileScreen) {
+              border-radius: 5px;
+              height: 45px;
+              max-width: 100% !important;
+            }
             &.active {
               display: block;
             }
@@ -1316,6 +1335,10 @@ header {
             font-size: 16px;
             font-weight: 400;
             line-height: 16px;
+            @media (max-width: $mobileScreen) {
+              height: 45px;
+              max-width: 50% !important;
+            }
           }
           .btn-style {
             &:active {
@@ -1418,6 +1441,10 @@ header {
     top: 87px;
     left: 9px;
     display: none;
+    @media (max-width: $mobileScreen) {
+      height:calc(100vh - 284px);
+      top: 0;
+    }
     &.active {
       display: block;
     }
@@ -1601,9 +1628,9 @@ header {
           .dropdown {
             position: relative;
             left: -10px;
-             @media (max-width: $mobileScreen) {
+            @media (max-width: $mobileScreen) {
               left: -5px;
-             }
+            }
             .dropdown-toggle {
               width: 20px;
               height: 13px;
@@ -1626,24 +1653,23 @@ header {
               background: $white;
               box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.1);
               .dropdown-item {
-                 @media (max-width: $mobileScreen) {
-                  padding: 5px ;
-                 }
+                @media (max-width: $mobileScreen) {
+                  padding: 5px;
+                }
                 img {
                   margin-right: 10px;
                   width: 16px;
                   height: 16px;
-                   
                 }
                 span {
                   color: $black;
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 14px;
-                   @media (max-width: $mobileScreen) {
+                  @media (max-width: $mobileScreen) {
                     font-size: 12px;
                     line-height: 10px;
-                   }
+                  }
                 }
               }
             }

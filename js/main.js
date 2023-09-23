@@ -7,7 +7,6 @@ $(document).ready(function () {
     $(".compile-wrapper").addClass("active");
     $(".inner-div").addClass("active");
     $(".done-btn").addClass("active");
-    
   });
   $(".done-btn").click(function () {
     $(".compile-wrapper").removeClass("active");
@@ -17,7 +16,10 @@ $(document).ready(function () {
   });
 
   $(".close-right-sidebar").click(function () {
-    showLeftSidebar();
+    var windowWidth = $(window).width();
+    if (windowWidth > 767) {
+      showLeftSidebar();
+    }
   });
   function showLeftSidebar() {
     $(".right-sidebar").removeClass("active");
@@ -127,6 +129,9 @@ $(document).ready(function () {
   }
 
   function showStep(step) {
+    $(".compile-wrapper").removeClass("active");
+    $(".inner-div").removeClass("active");
+    $(".done-btn").removeClass("active");
     $(".prescription-step").hide();
     $(".indicator-step").removeClass("active");
     $(".prescription-step:nth-child(" + step + ")").show();
@@ -171,7 +176,6 @@ $(document).ready(function () {
         hidwLeftSidebar();
       } else {
         showLeftSidebar();
-        
       }
     }
   }
@@ -194,6 +198,7 @@ $(document).ready(function () {
   }
 });
 
+// the below code is for chat functionality wjich append and done scroll
 $(document).ready(function () {
   // Define a function to handle the chat message rendering
   function renderChatMessage() {
@@ -250,7 +255,7 @@ $(document).ready(function () {
 
     $("#chat-input").val("");
 
-     $(".chat-body-wrapper").scrollTop($(".chat-body-wrapper")[0].scrollHeight);
+    $(".chat-body-wrapper").scrollTop($(".chat-body-wrapper")[0].scrollHeight);
   }
 
   $(document).ready(function () {
@@ -266,58 +271,56 @@ $(document).ready(function () {
   });
 });
 
+// the below code written by wasim akram  for search tag + functionality
+$(document).ready(function () {
+  // Reference to the search input field
+  var $searchInput = $(".compile-search-input");
 
+  // Reference to the list of items
+  var $listItems = $(".content-wrapper .item");
 
-  // the below code written by wasim akram  for search tag + functionality
-  $(document).ready(function () {
-    // Reference to the search input field
-    var $searchInput = $(".compile-search-input");
+  // Reference to the "Add New" button
+  var $addNewButton = $(".no-result-wrapper");
 
-    // Reference to the list of items
-    var $listItems = $(".content-wrapper .item");
+  // Initially, hide the "Add New" button
+  $addNewButton.hide();
 
-    // Reference to the "Add New" button
-    var $addNewButton = $(".no-result-wrapper");
+  // Function to filter items based on search term
+  function filterItems(searchTerm) {
+    var resultsFound = false;
 
-    // Initially, hide the "Add New" button
-    $addNewButton.hide();
+    $listItems.each(function () {
+      var $span = $(this).find("span");
+      var itemText = $span.text().toLowerCase();
 
-    // Function to filter items based on search term
-    function filterItems(searchTerm) {
-      var resultsFound = false;
-
-      $listItems.each(function () {
-        var $span = $(this).find("span");
-        var itemText = $span.text().toLowerCase();
-
-        if (itemText.includes(searchTerm)) {
-          $(this).show();
-          resultsFound = true;
-        } else {
-          $(this).hide();
-        }
-      });
-
-      // Show/hide the "Add New" button based on search results
-      if (resultsFound) {
-        $addNewButton.hide();
+      if (itemText.includes(searchTerm)) {
+        $(this).show();
+        resultsFound = true;
       } else {
-        $addNewButton.show();
+        $(this).hide();
       }
+    });
+
+    // Show/hide the "Add New" button based on search results
+    if (resultsFound) {
+      $addNewButton.hide();
+    } else {
+      $addNewButton.show();
     }
+  }
 
-    // Trigger the input event on page load
-    $searchInput.trigger("input");
+  // Trigger the input event on page load
+  $searchInput.trigger("input");
 
-    // Attach input event listener
-    $searchInput.on("input", function () {
-      var searchTerm = $(this).val().toLowerCase();
-      filterItems(searchTerm);
-    });
-
-    $(".content-wrapper .item").click(function () {
-      var selected_text = $(this).text();
-      $(".compile-search-input").val(selected_text);
-      $(".compile-search-input").trigger("input");
-    });
+  // Attach input event listener
+  $searchInput.on("input", function () {
+    var searchTerm = $(this).val().toLowerCase();
+    filterItems(searchTerm);
   });
+
+  $(".content-wrapper .item").click(function () {
+    var selected_text = $(this).text();
+    $(".compile-search-input").val(selected_text);
+    $(".compile-search-input").trigger("input");
+  });
+});

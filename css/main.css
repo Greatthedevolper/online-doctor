@@ -380,6 +380,11 @@ header a.logo img {
 .main-wrapper-page:has(.right-sidebar.active) {
   grid-template-columns: auto 420px;
 }
+@media (max-width: 767px) {
+  .main-wrapper-page:has(.right-sidebar.active) {
+    grid-template-columns: auto;
+  }
+}
 .main-wrapper-page .page-content {
   background: #fff;
 }
@@ -830,6 +835,7 @@ header a.logo img {
   .progress-bar-wrapper.appointment-wrapper .steps-wrapper .step-circle strong {
     font-size: 8px;
     line-height: 8px;
+    height: 16px;
   }
 }
 
@@ -1401,7 +1407,7 @@ header a.logo img {
 }
 @media (max-width: 767px) {
   .appointment-page-content .main-page .inner-page-wrapper {
-    height: calc(100vh - 161px);
+    height: calc(100vh - 142px);
   }
 }
 .appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper {
@@ -1485,8 +1491,9 @@ header a.logo img {
   border: 1px solid #8b7ff8;
 }
 .appointment-page-content .main-page .video-wrapper {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 150px);
   position: relative;
+  padding: 15px 15px 0;
 }
 .appointment-page-content .main-page .video-wrapper .incoming-video {
   position: relative;
@@ -1505,7 +1512,7 @@ header a.logo img {
   right: 30px;
 }
 .appointment-page-content .main-page .audio-wrapper {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 165px);
   border-radius: 15px;
   background: #8b7ff8;
   max-width: 100%;
@@ -1517,15 +1524,14 @@ header a.logo img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 .appointment-page-content .main-page .audio-wrapper .incoming-wrapper .img-wrapper {
   width: 174px;
   height: 174px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 .appointment-page-content .main-page .audio-wrapper .incoming-wrapper .img-wrapper img {
   width: 100%;
@@ -1538,7 +1544,7 @@ header a.logo img {
   font-weight: 600;
   line-height: 28px;
   margin: 20px 0;
-  display: inline-block;
+  display: block;
 }
 .appointment-page-content .main-page .audio-wrapper .incoming-wrapper span {
   color: #fff;
@@ -1661,6 +1667,7 @@ header a.logo img {
   position: absolute;
   bottom: -15px;
   left: 0;
+  right: 0;
 }
 .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .compile-btn {
   background: #8b7ff8;
@@ -1670,6 +1677,13 @@ header a.logo img {
   line-height: 16px;
   height: 50px;
 }
+@media (max-width: 767px) {
+  .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .compile-btn {
+    border-radius: 5px;
+    height: 45px;
+    max-width: 100% !important;
+  }
+}
 .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .compile-btn.active {
   display: none;
 }
@@ -1677,6 +1691,13 @@ header a.logo img {
   display: none;
   background: #8b7ff8;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .done-btn {
+    border-radius: 5px;
+    height: 45px;
+    max-width: 100% !important;
+  }
 }
 .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .done-btn.active {
   display: block;
@@ -1689,6 +1710,12 @@ header a.logo img {
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .step-btn {
+    height: 45px;
+    max-width: 50% !important;
+  }
 }
 .right-sidebar .prescription-form-wrapper #prescription-form .prescription-step .action-div .btn-style:active {
   background: #8b7ff8;
@@ -1779,6 +1806,12 @@ header a.logo img {
   top: 87px;
   left: 9px;
   display: none;
+}
+@media (max-width: 767px) {
+  .right-sidebar .compile-wrapper {
+    height: calc(100vh - 284px);
+    top: 0;
+  }
 }
 .right-sidebar .compile-wrapper.active {
   display: block;
