@@ -1399,7 +1399,7 @@ header a.logo img {
 }
 @media (max-width: 767px) {
   .appointment-page-content .main-page .inner-page-wrapper {
-    height: calc(100vh - 145px);
+    height: calc(100vh - 161px);
   }
 }
 .appointment-page-content .main-page .inner-page-wrapper .call-permission-wrapper {
