@@ -3,7 +3,6 @@ header {
   padding: 11px 0;
   background: $white;
   box-shadow: 0px 3px 25px 0px rgba(194, 196, 205, 0.28);
-
   a.logo {
     width: 130px;
     height: 47.185px;
@@ -16,7 +15,293 @@ header {
       height: 100%;
     }
   }
+  &.main-header {
+    position: absolute;
+    z-index: 3;
+    top: 30px;
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px 0px rgba(194, 196, 205, 0.1);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 30px;
+    a.home-logo {
+      width: 110px;
+      height: 54.83px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    nav {
+      ul {
+        @media (max-width: $mobileScreen) {
+          display: none;
+        }
+        li {
+          display: inline-block;
+          &:not(:last-of-type) {
+            margin-right: 30px;
+          }
+          a {
+            color: $dk-text;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            position: relative;
+            &:after {
+              content: "";
+              position: absolute;
+              display: block;
+              margin: 0 auto;
+              bottom: -10px;
+              left: 0;
+              right: 0;
+              background: $primary;
+              border-radius: 5px;
+              width: 0;
+              height: 2px;
+              transition: all 0.3s ease-in-out;
+            }
+            &.active,
+            &:hover {
+              color: $primary;
+              &:after {
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+      .toggle {
+        display: none;
+        @media (max-width: $mobileScreen) {
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
+// landing page scss start
+.banner {
+  background: url("../images/banner-bg-img.png") no-repeat 100% 100%;
+  background-size: cover;
+  position: relative;
+  padding: 290px 0 80px;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+  }
+  .banner-content {
+    position: relative;
+    z-index: 4;
+    h1 {
+      color: $white;
+      // font-family: Nirmala UI;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 70px;
+    }
+    p {
+      color: $white;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 28px;
+      margin: 20px 0 40px;
+    }
+    .available-doctors {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      justify-content: center;
+      margin-bottom: 60px;
+      ul {
+        li {
+          display: inline-block;
+          margin-left: -20px;
+          img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1.5px solid #fff;
+          }
+        }
+      }
+      strong {
+        color: $white;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+    .banner-action-wrapper {
+      column-gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn-style {
+        min-width: 98px;
+        padding: 15px 36px;
+        background: $white;
+        color: $black;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        transition: all 0.3s ease-in-out;
+        &.active,
+        &:hover {
+          background: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// about us start
+
+.about-us {
+  background: url("../images/about-bg-img.png") no-repeat 100% 100%;
+  background-size: cover;
+  height: 423px;
+  position: relative;
+  margin-top: 100px;
+  padding-top: 60px;
+  text-align: center;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+  }
+  .about-content-wrapper {
+    position: relative;
+    z-index: 4;
+
+    h2 {
+      color: $white;
+      margin-bottom: 60px;
+    }
+    .how-we-wrok-btn {
+      background: $white;
+      width: 280px;
+      height: 60px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 20px;
+      position: relative;
+      margin: 0 auto;
+      cursor: pointer;
+      span {
+        color: $black;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 19.715px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        border: 4px solid $white;
+        border-radius: 50%;
+        background: $primary;
+        color: $white;
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.features {
+  position: relative;
+  top: -135px;
+  .feature-wrapper {
+    border-radius: 15px;
+    background: #8b7ff8;
+    width: 100%;
+    padding: 40px 30px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      li {
+        flex: 0 0 48%;
+        display: inline-flex;
+        padding: 10px 27px 10px 10px;
+        align-items: center;
+        column-gap: 20px;
+        background: $white;
+        border-radius: 10px;
+        .number-div {
+          flex: 1 0 70px;
+          border-radius: 10px;
+          width: 70px;
+          height: 70px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: $white;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 24px;
+          &.blue {
+            background: #01479d;
+          }
+          &.red {
+            background: #e4011d;
+          }
+          &.yellow {
+            background: #f5be2d;
+          }
+          &.purple {
+            background: #a400cd;
+          }
+          &.gray {
+            background: #a7b191;
+          }
+        }
+        .content-div {
+          p {
+            color: $black;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
+
+// landing page scss end
 
 .main-wrapper-page {
   display: grid;
@@ -1442,7 +1727,7 @@ header {
     left: 9px;
     display: none;
     @media (max-width: $mobileScreen) {
-      height:calc(100vh - 284px);
+      height: calc(100vh - 284px);
       top: 0;
     }
     &.active {

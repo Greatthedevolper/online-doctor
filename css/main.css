@@ -64,6 +64,9 @@ h2,
 .h2 {
   font-family: "Open Sans";
   margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
 }
 h2.small,
 .h2.small {
@@ -165,6 +168,20 @@ h3,
 }
 .btn-style.apple-btn {
   background: #555;
+}
+.btn-style.dropdown-btn {
+  width: 90px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #8b7ff8;
+  background: rgba(139, 127, 248, 0.1);
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.btn-style.dropdown-btn img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 p {
@@ -366,6 +383,280 @@ header a.logo {
 header a.logo img {
   width: 100%;
   height: 100%;
+}
+header.main-header {
+  position: absolute;
+  z-index: 3;
+  top: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px 0px rgba(194, 196, 205, 0.1);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 30px;
+}
+header.main-header a.home-logo {
+  width: 110px;
+  height: 54.83px;
+}
+header.main-header a.home-logo img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  header.main-header nav ul {
+    display: none;
+  }
+}
+header.main-header nav ul li {
+  display: inline-block;
+}
+header.main-header nav ul li:not(:last-of-type) {
+  margin-right: 30px;
+}
+header.main-header nav ul li a {
+  color: #101014;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  position: relative;
+}
+header.main-header nav ul li a:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  background: #8b7ff8;
+  border-radius: 5px;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+header.main-header nav ul li a.active, header.main-header nav ul li a:hover {
+  color: #8b7ff8;
+}
+header.main-header nav ul li a.active:after, header.main-header nav ul li a:hover:after {
+  width: 20px;
+}
+header.main-header nav .toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  header.main-header nav .toggle {
+    display: inline-block;
+  }
+}
+
+.banner {
+  background: url("../images/banner-bg-img.png") no-repeat 100% 100%;
+  background-size: cover;
+  position: relative;
+  padding: 290px 0 80px;
+}
+.banner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+}
+.banner .banner-content {
+  position: relative;
+  z-index: 4;
+}
+.banner .banner-content h1 {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.banner .banner-content p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 20px 0 40px;
+}
+.banner .banner-content .available-doctors {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.banner .banner-content .available-doctors ul li {
+  display: inline-block;
+  margin-left: -20px;
+}
+.banner .banner-content .available-doctors ul li img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+}
+.banner .banner-content .available-doctors strong {
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+}
+.banner .banner-content .banner-action-wrapper {
+  column-gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner-content .banner-action-wrapper .btn-style {
+  min-width: 98px;
+  padding: 15px 36px;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.banner .banner-content .banner-action-wrapper .btn-style.active, .banner .banner-content .banner-action-wrapper .btn-style:hover {
+  background: #8b7ff8;
+  color: #fff;
+}
+
+.about-us {
+  background: url("../images/about-bg-img.png") no-repeat 100% 100%;
+  background-size: cover;
+  height: 423px;
+  position: relative;
+  margin-top: 100px;
+  padding-top: 60px;
+  text-align: center;
+}
+.about-us:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+}
+.about-us .about-content-wrapper {
+  position: relative;
+  z-index: 4;
+}
+.about-us .about-content-wrapper h2 {
+  color: #fff;
+  margin-bottom: 60px;
+}
+.about-us .about-content-wrapper .how-we-wrok-btn {
+  background: #fff;
+  width: 280px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.about-us .about-content-wrapper .how-we-wrok-btn span {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 19.715px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.about-us .about-content-wrapper .how-we-wrok-btn a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: #8b7ff8;
+  color: #fff;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.features {
+  position: relative;
+  top: -135px;
+}
+.features .feature-wrapper {
+  border-radius: 15px;
+  background: #8b7ff8;
+  width: 100%;
+  padding: 40px 30px;
+}
+.features .feature-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.features .feature-wrapper ul li {
+  flex: 0 0 48%;
+  display: inline-flex;
+  padding: 10px 27px 10px 10px;
+  align-items: center;
+  column-gap: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+.features .feature-wrapper ul li .number-div {
+  flex: 1 0 70px;
+  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.features .feature-wrapper ul li .number-div.blue {
+  background: #01479d;
+}
+.features .feature-wrapper ul li .number-div.red {
+  background: #e4011d;
+}
+.features .feature-wrapper ul li .number-div.yellow {
+  background: #f5be2d;
+}
+.features .feature-wrapper ul li .number-div.purple {
+  background: #a400cd;
+}
+.features .feature-wrapper ul li .number-div.gray {
+  background: #a7b191;
+}
+.features .feature-wrapper ul li .content-div p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .main-wrapper-page {

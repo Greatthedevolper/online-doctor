@@ -63,7 +63,9 @@ h2,
 .h2 {
   font-family: $sans;
   margin: 0;
-
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
   &.small {
     font-size: 18px;
     font-weight: 600;
@@ -119,11 +121,11 @@ h3,
     min-width: 223px;
     height: 72px;
     padding: 24px 0px;
-     @media (max-width: $mobileScreen) {
+    @media (max-width: $mobileScreen) {
       min-width: 152px;
       height: 45px;
       border-radius: 5px;
-     }
+    }
   }
 
   &.previous-btn {
@@ -131,11 +133,11 @@ h3,
     height: 72px;
     padding: 24px 0px;
     background: #ebeaf1;
-     @media (max-width: $mobileScreen) {
+    @media (max-width: $mobileScreen) {
       min-width: 152px;
       height: 45px;
       border-radius: 5px;
-     }
+    }
     &:hover {
       color: $white;
       background: $primary;
@@ -160,6 +162,20 @@ h3,
   }
   &.apple-btn {
     background: #555;
+  }
+  &.dropdown-btn {
+    width: 90px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #8b7ff8;
+    background: rgba(139, 127, 248, 0.1);
+    justify-content: space-between;
+    padding: 5px 10px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
   }
 }
 p {
@@ -326,8 +342,7 @@ strong {
   }
 }
 
-
-.back-arrow{
+.back-arrow {
   position: absolute;
   left: -20px;
   top: 50%;
