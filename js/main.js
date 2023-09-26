@@ -324,3 +324,138 @@ $(document).ready(function () {
     $(".compile-search-input").trigger("input");
   });
 });
+
+
+// products carousel js start
+
+if (jQuery(".products-wrapper").length) {
+  jQuery(".products-wrapper").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    navText: [
+      "<i class='fa-solid fa-arrow-left'></i>",
+      "<i class='fa-solid fa-arrow-right'></i>",
+    ],
+    dotsEach: true,
+    autoplay: true,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      900: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+      1200: {
+        items: 3,
+      },
+      1700: {
+        items: 4,
+      },
+      1920: {
+        items: 5,
+      },
+    },
+  });
+}
+// products carousel js end
+
+
+// team-card-wrapper carousel js start
+
+if (jQuery(".team-card-wrapper").length) {
+  jQuery(".team-card-wrapper").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    navText: [
+      "<i class='fa-solid fa-arrow-left'></i>",
+      "<i class='fa-solid fa-arrow-right'></i>",
+    ],
+    dotsEach: true,
+    autoplay: true,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      900: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      },
+      1700: {
+        items: 4,
+      },
+      1920: {
+        items: 5,
+      },
+    },
+  });
+}
+// team-card-wrapper carousel js end
+
+
+// appoinment-card-wrapper carousel js start
+
+if (jQuery(".appoinment-card-wrapper").length) {
+  jQuery(".appoinment-card-wrapper").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    navText: [
+      "<i class='fa-solid fa-arrow-left'></i>",
+      "<i class='fa-solid fa-arrow-right'></i>",
+    ],
+    dotsEach: true,
+    autoplay: true,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      900: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+      1200: {
+        items: 3,
+      },
+      1700: {
+        items: 4,
+      },
+      1920: {
+        items: 5,
+      },
+    },
+  });
+}
+// appoinment-card-wrapper carousel js end

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -27,11 +28,23 @@
           <i class="fa-solid fa-bars"></i>
         </span>
       </nav>
-      <button class="btn-style dropdown-btn">
-        <img src="/images/doctor-profile.png" alt="" />
-        <span><i class="fa-solid fa-caret-down"></i></span>
-      </button>
+      <div class="dropdown-center">
+        <button
+          class="btn-style dropdown-btn dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img src="/images/doctor-profile.png" alt="" />
+          <span><i class="fa-solid fa-caret-down"></i></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Login</a></li>
+          <li><a class="dropdown-item" href="#">List</a></li>
+        </ul>
+      </div>
     </header>
+
     <section class="banner">
       <div class="conatiner text-center">
         <div class="banner-content">
@@ -39,99 +52,180 @@
             अब इंडेक्स हॉस्पिटल से जुड़ना<br />
             हुआ आसान
           </h1>
-          <p>Private Consultation Available In Audio and Video Call</p>
-          <div class="available-doctors">
-            <ul>
-              <li><img src="/images/doctor-profile.png" alt="" /></li>
-              <li><img src="/images/doctor-profile.png" alt="" /></li>
-              <li><img src="/images/doctor-profile.png" alt="" /></li>
-              <li><img src="/images/doctor-profile.png" alt="" /></li>
-            </ul>
-            <strong>100+ Doctors Available</strong>
-          </div>
           <div class="banner-action-wrapper">
-            <a href="#" class="btn-style active">Consult Now</a>
-            <a href="#" class="btn-style">Book Now</a>
+            <a href="#" class="btn-style">Book Your E-Clinic Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="our-products">
+      <div class="container">
+        <h2>Our Products</h2>
+        <div class="products-wrapper owl-carousel">
+          <div class="product-card dk-blue">
+            <h3>Index Swasthyam Multi-Specialty E-Clinc</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Bibendum mi blandit
+              iaculis imperdiet feugiat egestas arcu consequat.
+            </p>
+            <div class="img-wrapper">
+              <img src="./images/eclinc-img.png" alt="product-img" />
+            </div>
+          </div>
+          <div class="product-card green">
+            <h3>Swasthyam Doot</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Bibendum mi blandit
+              iaculis imperdiet feugiat egestas arcu consequat.
+            </p>
+            <div class="img-wrapper">
+              <img src="./images/eclinic-bike.png" alt="product-img" />
+            </div>
+          </div>
+          <div class="product-card blue">
+            <h3>Tele-health Platform</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Bibendum mi blandit
+              iaculis imperdiet feugiat egestas arcu consequat.
+            </p>
+            <div class="img-wrapper">
+              <img src="./images/laptop-img.png" alt="product-img" />
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="about-us">
       <div class="container">
+        <h2>About Us</h2>
         <div class="about-content-wrapper">
-          <h2>About Us</h2>
-          <div class="how-we-wrok-btn">
-            <span>How We Work</span>
-            <a href="#">
-              <i class="fa-solid fa-play"></i>
-            </a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Ultrices arcu nec ac
+            porttitor pretium tellus vulputate amet. Id dictum dui lorem
+            consectetur quis vel sagittis condimentum. Tristique et elementum
+            libero amet ut felis at. Mauris leo ut gravida blandit diam
+            pellentesque. Proin risus eu rhoncus et. Ultricies mattis odio odio
+            elit proin eu fringilla sem. Iaculis faucibus amet vestibulum
+            fermentum malesuada. Fermentum eget quis sed non pretium egestas.
+            Congue amet rhoncus ullamcorper tortor aliquam nulla nisi. In nullam
+            laoreet vel et nec. Luctus vulputate tempor vel ultricies leo. At
+            eget mattis suscipit feugiat nullam feugiat blandit accumsan justo.
+            Mus quis ut quam id. Vitae neque in magna turpis at ipsum. Aenean
+            aliquet arcu libero nibh ullamcorper commodo id. Nullam vitae et
+            tortor quis egestas placerat vitae tortor magna. Habitant vehicula
+            ut amet vel at. Fames dolor elementum amet eu aliquam id in sapien.
+            Vitae nunc ac luctus neque at magna commodo felis. Feugiat risus
+            viverra sed amet ante mauris diam vestibulum. Augue feugiat in amet
+            interdum. Proin duis enim orci in mattis neque. Et eget feugiat non
+            et fusce diam in. Sagittis ut dui habitant facilisis elementum
+            vestibulum amet. A et bibendum scelerisque nibh orci ullamcorper.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="out-team">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Experts Team</h2>
+          <a href="#" class="btn-style active">More Doctor</a>
+        </div>
+        <div class="team-card-wrapper owl-carousel">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img src="/images/team-img-1.png" alt="team-img">
+            </div>
+            <div class="content-wrapper">
+              <h3>Dr. Sheetal Singh</h3>
+              <ul>
+                <li><p>Radiodiagnosis Specialist</p></li>
+                <li><p>MD Radiodiagnosis</p></li>
+                <li><p>18 years of experience</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img src="/images/team-img-2.png" alt="team-img">
+            </div>
+            <div class="content-wrapper">
+              <h3>Dr. Navin Agrawal</h3>
+              <ul>
+                <li><p>ENT Specialist</p></li>
+                <li><p>M.S. (ENT)</p></li>
+                <li><p>18 years of experience</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img src="/images/team-img-3.png" alt="team-img">
+            </div>
+            <div class="content-wrapper">
+              <h3>Dr. Sheetal Singh</h3>
+              <ul>
+                <li><p>Dermatology Specialist</p></li>
+                <li><p>M.D. (Skin &amp; VD)</p></li>
+                <li><p>15 years of experience</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img src="/images/team-img-4.png" alt="team-img">
+            </div>
+            <div class="content-wrapper">
+              <h3>Dr. Nilesh Guru</h3>
+              <ul>
+                <li><p>Urology Specialist </p></li>
+                <li><p>MBBS, MS (General Surgery) M. Ch (Urology) FMAS</p></li>
+                <li><p>18 years of experience</p></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="features">
+    <section class="book-appointment">
       <div class="container">
-        <div class="feature-wrapper">
-          <ul>
-            <li>
-              <div class="number-div blue">01</div>
-              <div class="content-div">
-                <p>
-                  Index-Swastyam Multispeciality E-Clinic, a health-tech
-                  Tele-Medicine digital platfrom dedicate to improve rural
-                  health and optimize th urban health industry Infrastructure
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="number-div red">02</div>
-              <div class="content-div">
-                <p>
-                  Index-Swastyam Multispeciality E-Clinic, a health-tech
-                  Tele-Medicine digital platfrom dedicate to improve rural
-                  health and optimize th urban health industry Infrastructure
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="number-div yellow">03</div>
-              <div class="content-div">
-                <p>
-                  Index-Swastyam Multispeciality E-Clinic, a health-tech
-                  Tele-Medicine digital platfrom dedicate to improve rural
-                  health and optimize th urban health industry Infrastructure
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="number-div purple">04</div>
-              <div class="content-div">
-                <p>
-                  Index-Swastyam Multispeciality E-Clinic, a health-tech
-                  Tele-Medicine digital platfrom dedicate to improve rural
-                  health and optimize th urban health industry Infrastructure
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="number-div gray">05</div>
-              <div class="content-div">
-                <p>
-                  Index-Swastyam Multispeciality E-Clinic, a health-tech
-                  Tele-Medicine digital platfrom dedicate to improve rural
-                  health and optimize th urban health industry Infrastructure
-                </p>
-              </div>
-            </li>
-          </ul>
+        <div class="section-heading">
+          <h2>Book Appointment Now</h2>
+          <a href="#" class="btn-style active">Consult Now</a>
+        </div>
+        <div class="appoinment-card-wrapper owl-carousel">
+          <div class="appoinment-card">
+            <div class="img-wrapper">
+              <img src="/images/appoinment-img-1.png" alt="appoinment-img">
+            </div>
+            <div class="content-wrapper">
+              <h3>Jonth Smith</h3>
+              <p>Head of The ABC Chemicals</p>
+            </div>
+          </div>
+          <div class="appoinment-card">
+            <div class="img-wrapper">
+              <img src="/images/appoinment-img-2.png" alt="appoinment-img">
+            </div>
+            <div class="content-wrapper">
+              <h3>Sumaiya Islam</h3>
+              <p>Head of The ABC Chemicals</p>
+            </div>
+          </div>
+          <div class="appoinment-card">
+            <div class="img-wrapper">
+              <img src="/images/appoinment-img-3.png" alt="appoinment-img">
+            </div>
+            <div class="content-wrapper">
+              <h3>Riya Ray</h3>
+              <p>Head of The ABC Chemicals</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
     <script src="js/main.js"></script>
 
