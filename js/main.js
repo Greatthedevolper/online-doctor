@@ -360,10 +360,10 @@ if (jQuery(".products-wrapper").length) {
         items: 3,
       },
       1700: {
-        items: 4,
+        items: 3,
       },
       1920: {
-        items: 5,
+        items: 3,
       },
     },
   });
@@ -408,7 +408,7 @@ if (jQuery(".team-card-wrapper").length) {
         items: 4,
       },
       1920: {
-        items: 5,
+        items: 4,
       },
     },
   });
@@ -453,7 +453,7 @@ if (jQuery(".appoinment-card-wrapper").length) {
         items: 4,
       },
       1920: {
-        items: 5,
+        items: 4,
       },
     },
   });
@@ -495,10 +495,10 @@ if (jQuery(".blog-card-wrapper").length) {
         items: 3,
       },
       1700: {
-        items: 4,
+        items: 3,
       },
       1920: {
-        items: 5,
+        items: 3,
       },
     },
   });
@@ -541,10 +541,10 @@ if (jQuery(".reviews-card-wrapper").length) {
         items: 3,
       },
       1700: {
-        items: 4,
+        items: 3,
       },
       1920: {
-        items: 5,
+        items: 3,
       },
     },
   });
