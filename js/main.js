@@ -338,7 +338,7 @@ if (jQuery(".products-wrapper").length) {
       "<i class='fa-solid fa-arrow-right'></i>",
     ],
     dotsEach: true,
-    autoplay: true,
+    autoplay: false,
     slideTransition: "linear",
     autoplayTimeout: 3000,
     autoplaySpeed: 3000,
@@ -383,7 +383,7 @@ if (jQuery(".team-card-wrapper").length) {
       "<i class='fa-solid fa-arrow-right'></i>",
     ],
     dotsEach: true,
-    autoplay: true,
+    autoplay: false,
     slideTransition: "linear",
     autoplayTimeout: 3000,
     autoplaySpeed: 3000,
@@ -428,7 +428,7 @@ if (jQuery(".appoinment-card-wrapper").length) {
       "<i class='fa-solid fa-arrow-right'></i>",
     ],
     dotsEach: true,
-    autoplay: true,
+    autoplay: false,
     slideTransition: "linear",
     autoplayTimeout: 3000,
     autoplaySpeed: 3000,
@@ -459,3 +459,94 @@ if (jQuery(".appoinment-card-wrapper").length) {
   });
 }
 // appoinment-card-wrapper carousel js end
+
+
+// blog-card-wrapper carousel js start
+
+if (jQuery(".blog-card-wrapper").length) {
+  jQuery(".blog-card-wrapper").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    navText: [
+      "<i class='fa-solid fa-arrow-left'></i>",
+      "<i class='fa-solid fa-arrow-right'></i>",
+    ],
+    dotsEach: true,
+    autoplay: false,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      900: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+      1200: {
+        items: 3,
+      },
+      1700: {
+        items: 4,
+      },
+      1920: {
+        items: 5,
+      },
+    },
+  });
+}
+// blog-card-wrapper carousel js end
+
+
+
+// reviews-card-wrapper carousel js start
+
+if (jQuery(".reviews-card-wrapper").length) {
+  jQuery(".reviews-card-wrapper").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    navText: [
+      "<i class='fa-solid fa-arrow-left'></i>",
+      "<i class='fa-solid fa-arrow-right'></i>",
+    ],
+    dotsEach: true,
+    autoplay: false,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      900: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+      1200: {
+        items: 3,
+      },
+      1700: {
+        items: 4,
+      },
+      1920: {
+        items: 5,
+      },
+    },
+  });
+}
+// reviews-card-wrapper carousel js end
