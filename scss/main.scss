@@ -799,7 +799,7 @@ footer {
       font-size: 18px;
       font-weight: 400;
       line-height: 18px;
-      @media (max-width: $mobileScreen) {
+      @media (max-width: $tabScreen) {
         text-align: center;
         line-height: 26px;
         font-size: 14px;
@@ -810,7 +810,7 @@ footer {
       align-items: center;
       justify-content: flex-end;
       column-gap: 20px;
-      @media (max-width: $mobileScreen) {
+      @media (max-width: $tabScreen) {
         justify-content: center;
         margin-top: 20px;
       }

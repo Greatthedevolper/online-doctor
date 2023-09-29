@@ -5,6 +5,14 @@ body {
   &.active {
     overflow: hidden;
   }
+  &.landing-page {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0;
+    }
+  }
 }
 * {
   &::-webkit-scrollbar {
@@ -400,11 +408,12 @@ strong {
     flex-direction: column;
     gap: 30px;
     margin-bottom: 30px;
-    h2,p{
+    h2,
+    p {
       text-align: center;
     }
-    h2{
-      font-size: 30px ;
+    h2 {
+      font-size: 30px;
       line-height: 36px;
     }
   }

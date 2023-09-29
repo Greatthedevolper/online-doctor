@@ -1,9 +1,14 @@
-$(document).ready(function () { 
-  $('.toggle').click(function () {
-    $(this).toggleClass('active');
+$(document).ready(function () {
+  $(".toggle").click(function () {
+    $(this).toggleClass("active");
     $(".main-header-menu").toggleClass("active");
     $("body").toggleClass("active");
-  })
+  });
+  $(".main-header-menu a").click(function () {
+    $(".toggle").removeClass("active");
+    $(".main-header-menu").removeClass("active");
+    $("body").removeClass("active");
+  });
 });
 $(document).ready(function () {
   $(".tab-button").click(function () {
@@ -332,7 +337,6 @@ $(document).ready(function () {
   });
 });
 
-
 // products carousel js start
 
 if (jQuery(".products-wrapper").length) {
@@ -376,7 +380,6 @@ if (jQuery(".products-wrapper").length) {
   });
 }
 // products carousel js end
-
 
 // team-card-wrapper carousel js start
 
@@ -422,7 +425,6 @@ if (jQuery(".team-card-wrapper").length) {
 }
 // team-card-wrapper carousel js end
 
-
 // appoinment-card-wrapper carousel js start
 
 if (jQuery(".appoinment-card-wrapper").length) {
@@ -466,7 +468,6 @@ if (jQuery(".appoinment-card-wrapper").length) {
   });
 }
 // appoinment-card-wrapper carousel js end
-
 
 // blog-card-wrapper carousel js start
 
@@ -512,8 +513,6 @@ if (jQuery(".blog-card-wrapper").length) {
 }
 // blog-card-wrapper carousel js end
 
-
-
 // reviews-card-wrapper carousel js start
 
 if (jQuery(".reviews-card-wrapper").length) {
@@ -557,8 +556,6 @@ if (jQuery(".reviews-card-wrapper").length) {
   });
 }
 // reviews-card-wrapper carousel js end
-
-
 
 // consult-card-main-wrapper carousel js start
 
