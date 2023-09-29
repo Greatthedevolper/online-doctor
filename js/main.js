@@ -1,3 +1,10 @@
+$(document).ready(function () { 
+  $('.toggle').click(function () {
+    $(this).toggleClass('active');
+    $(".main-header-menu").toggleClass("active");
+    $("body").toggleClass("active");
+  })
+});
 $(document).ready(function () {
   $(".tab-button").click(function () {
     $(".tab-button").removeClass("active");
