@@ -396,6 +396,18 @@ strong {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 60px;
+  @media (max-width: $mobileScreen) {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+    h2,p{
+      text-align: center;
+    }
+    h2{
+      font-size: 30px ;
+      line-height: 36px;
+    }
+  }
   p {
     color: $black;
     font-size: 22px;
@@ -406,26 +418,24 @@ strong {
 
 // carousel css
 
-.owl-carousel .owl-dots.disabled {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 15px;
-}
-.owl-carousel .owl-nav.disabled {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 161px;
-}
-
-.owl-dots {
-  @media (max-width: $mobileScreen) {
+.owl-carousel {
+  .owl-dots,
+  .owl-dots.disabled {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 15px;
   }
+  .owl-nav,
+  .owl-nav.disabled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 161px;
+  }
+}
+
+.owl-dots {
   .owl-dot {
     span {
       width: 14px;
@@ -463,11 +473,7 @@ strong {
   margin-top: 60px;
   position: relative;
   top: 25px;
-  @media (max-width: $mobileScreen) {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
+
   .owl-prev,
   .owl-next {
     position: relative;

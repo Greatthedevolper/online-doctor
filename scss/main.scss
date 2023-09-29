@@ -35,7 +35,7 @@ header {
       }
     }
     nav {
-      @media (max-width: $mobileScreen) {
+      @media (max-width: $tabScreen) {
         text-align: right;
       }
       > ul {
@@ -43,7 +43,7 @@ header {
         align-items: center;
         column-gap: 30px;
         position: relative;
-        @media (max-width: $mobileScreen) {
+        @media (max-width: $tabScreen) {
           display: none;
         }
         > li {
@@ -82,7 +82,7 @@ header {
       .toggle {
         display: none;
         font-size: 30px;
-        @media (max-width: $mobileScreen) {
+        @media (max-width: $tabScreen) {
           display: inline-block;
         }
       }
