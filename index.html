@@ -13,35 +13,45 @@
 
   <body>
     <header class="main-header">
-      <a href="#" class="home-logo">
-        <img src="/images/index-logo.svg" alt="" />
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#" class="active">About Us</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Core Doctors Team</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <span class="toggle">
-          <i class="fa-solid fa-bars"></i>
-        </span>
-      </nav>
-      <div class="dropdown-center">
-        <button
-          class="btn-style dropdown-btn dropdown-toggle"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img src="/images/doctor-profile.png" alt="" />
-          <span><i class="fa-solid fa-caret-down"></i></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Login</a></li>
-          <li><a class="dropdown-item" href="#">List</a></li>
-        </ul>
+      <div class="container">
+        <div class="row align-items-center"> 
+          <div class="col-lg-3 col-6">
+            <a href="#" class="home-logo">
+              <img src="/images/index-logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="col-lg-9 col-6">
+            <nav>
+              <ul>
+                <li><a href="#about-us" class="active">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#">Core Doctors Team</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li class="dropdown-wrapper">
+                  <div class="dropdown-center">
+                    <button
+                      class="btn-style dropdown-btn dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="/images/doctor-profile.png" alt="" />
+                      <span><i class="fa-solid fa-caret-down"></i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Login</a></li>
+                      <li><a class="dropdown-item" href="#">List</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <span class="toggle">
+                <i class="fa-solid fa-bars"></i>
+              </span>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -58,7 +68,7 @@
         </div>
       </div>
     </section>
-    <section class="our-products">
+    <section class="our-products" id="products">
       <div class="container">
         <h2>Our Products</h2>
         <div class="products-wrapper owl-carousel">
@@ -95,7 +105,7 @@
         </div>
       </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="container">
         <h2>About Us</h2>
         <div class="about-content-wrapper">
@@ -180,6 +190,84 @@
                 <li><p>MBBS, MS (General Surgery) M. Ch (Urology) FMAS</p></li>
                 <li><p>18 years of experience</p></li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="consult">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 class="mb-2">Consult By Health Concern</h2>
+            <p>Get In Touch With The Experts And Specialist Doctors.</p>
+          </div>
+          <a href="#" class="btn-style active">See More</a>
+        </div>
+        <div class="consult-card-main-wrapper owl-carousel">
+          <div class="consult-card-wrapper">
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-1.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style active">Consult Now</a>
+            </div>
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-3.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style">Consult Now</a>
+            </div>
+          </div>
+          <div class="consult-card-wrapper">
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-1.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style">Consult Now</a>
+            </div>
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-2.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style">Consult Now</a>
+            </div>
+          </div>
+          <div class="consult-card-wrapper">
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-1.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style">Consult Now</a>
+            </div>
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-2.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style">Consult Now</a>
+            </div>
+          </div>
+          <div class="consult-card-wrapper">
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-1.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style">Consult Now</a>
+            </div>
+            <div class="consult-card">
+              <div class="img-wrapper">
+                <img src="/images/consult-img-2.png" alt="" />
+              </div>
+              <h3>Terry Calzoni</h3>
+              <a href="#" class="btn-style">Consult Now</a>
             </div>
           </div>
         </div>
@@ -388,12 +476,12 @@
         </div>
       </div>
     </section>
-    <section class="contact-us">
+    <section class="contact-us" id="contact-us">
       <div class="container">
         <h2>Contact Us</h2>
         <div class="contact-wrapper">
           <div class="row">
-            <div class="col-md-6 align-self-center">
+            <div class="col-md-5 align-self-center">
               <div class="have-question">
                 <h3>Have Questions? Get in touch!</h3>
                 <p>
@@ -449,50 +537,98 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="form-wrapper">
                 <h3>Contact Information</h3>
                 <p>
                   Please fill out the form to request a consultation and one of
                   our team members will get in touch shortly.
                 </p>
-                <form action="#">
+                <form action="#" class="form-contact">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="First Name"/>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="First Name"
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Last Name"/>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Last Name"
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email"/>
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="Email"
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Phone"/>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Phone"
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Location"/>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Location"
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Doctor"/>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Doctor"
+                        />
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <textarea name="" id=""  rows="10" class="w-100" placeholder="Message"></textarea>
+                      <textarea
+                        name=""
+                        id=""
+                        rows="2"
+                        class="w-100"
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          name=""
+                          id="contact-agree"
+                          class="form-check-input"
+                        />
+                        <label for="contact-agree" class="form-check-label"
+                          >I understand and agree that any information submitted
+                          will be forwarded.</label
+                        >
+                      </div>
                     </div>
                   </div>
-                  <input type="submit" value="Send Message" class="btn-style active">
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    class="btn-style active"
+                  />
                 </form>
               </div>
             </div>
@@ -500,13 +636,88 @@
         </div>
       </div>
     </section>
-
+    <footer>
+      <div class="container">
+        <div class="row mx-0 g-lg-0">
+          <div class="col-lg-4 mb-3">
+            <a href="/" class="footer-logo">
+              <img src="/images/index-logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="col-lg-3 ">
+            <h3>For Patients</h3>
+            <ul>
+              <li><a href="#">Search for Doctors</a></li>
+              <li><a href="#">Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h3>Swasthyam</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>
+                <a href="tel:+09 9907563568">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>+09 9907563568</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@swsthyam.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>info@swsthyam.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-9">
+              <p class="text-muted m-0">
+                Copyright © 2023 Design & Develop by Index Swasthyamcare.com
+                ,All rights reserved
+              </p>
+            </div>
+            <div class="col-lg-3 ">
+              <ul class="footer-social-links">
+                <li>
+                  <a href="" class="twitter"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="" class="youtube"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="" class="linkden"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="" class="whtsapp"
+                    ><i class="fa-brands fa-whatsapp"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
 
     <script src="js/main.js"></script>
-
-    <footer></footer>
   </body>
 </html>

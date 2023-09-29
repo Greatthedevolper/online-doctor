@@ -550,3 +550,49 @@ if (jQuery(".reviews-card-wrapper").length) {
   });
 }
 // reviews-card-wrapper carousel js end
+
+
+
+// consult-card-main-wrapper carousel js start
+
+if (jQuery(".consult-card-main-wrapper").length) {
+  jQuery(".consult-card-main-wrapper").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    navText: [
+      "<i class='fa-solid fa-arrow-left'></i>",
+      "<i class='fa-solid fa-arrow-right'></i>",
+    ],
+    dotsEach: true,
+    autoplay: false,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      900: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      },
+      1700: {
+        items: 4,
+      },
+      1920: {
+        items: 4,
+      },
+    },
+  });
+}
+// consult-card-main-wrapper carousel js end

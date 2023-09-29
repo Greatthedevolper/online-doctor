@@ -69,6 +69,10 @@ h2,
   font-size: 48px;
   font-weight: 600;
   line-height: 48px;
+  @media (max-width: $mobileScreen) {
+    font-size: 36px;
+    line-height: 40px;
+  }
   &.small {
     font-size: 18px;
     font-weight: 600;
@@ -392,6 +396,12 @@ strong {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 60px;
+  p {
+    color: $black;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+  }
 }
 
 // carousel css
@@ -410,6 +420,12 @@ strong {
 }
 
 .owl-dots {
+  @media (max-width: $mobileScreen) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
   .owl-dot {
     span {
       width: 14px;
@@ -447,6 +463,11 @@ strong {
   margin-top: 60px;
   position: relative;
   top: 25px;
+  @media (max-width: $mobileScreen) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   .owl-prev,
   .owl-next {
     position: relative;
