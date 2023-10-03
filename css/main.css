@@ -1,4 +1,8 @@
 @import "../fonts/stylesheet.css";
+.gray-text {
+  color: #bebebe;
+}
+
 body {
   font-family: "Open Sans";
 }
@@ -1193,7 +1197,7 @@ header.main-header .dropdown-wrapper .dropdown-center .dropdown-toggle:hover {
 }
 .contact-us .contact-wrapper .form-wrapper {
   border-radius: 12px;
-  background: #FBFBFB;
+  background: #fbfbfb;
   padding: 30px;
 }
 @media (max-width: 767px) {
@@ -1632,7 +1636,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   cursor: pointer;
 }
 .left-sidebar .chat-wrapper .chat-item:hover, .left-sidebar .chat-wrapper .chat-item.active {
-  background: #D9D9D9;
+  background: #d9d9d9;
   transition: all 0.3s ease-in-out;
 }
 .left-sidebar .chat-wrapper .chat-item:after {
@@ -1640,7 +1644,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   position: absolute;
   top: 0;
   right: 0;
-  background: #D9D9D9;
+  background: #d9d9d9;
   height: 1px;
   width: calc(100% - 60px);
 }
@@ -1687,7 +1691,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   line-height: 12px;
 }
 .left-sidebar .chat-wrapper .chat-item.active {
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
 .left-sidebar .chat-wrapper .new-chat {
   position: fixed;
@@ -1911,7 +1915,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
 }
 .profile-card #doctor-profile-form .doctor-profile-step .step-form-inner-div .content-wrapper {
   border-radius: 10px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   padding: 30px 30px;
 }
 @media (max-width: 767px) {
@@ -2858,7 +2862,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   line-height: 12px;
 }
 .right-sidebar .compile-wrapper .content-wrapper .item:hover, .right-sidebar .compile-wrapper .content-wrapper .item:active, .right-sidebar .compile-wrapper .content-wrapper .item.active {
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
 .right-sidebar .compile-wrapper .content-wrapper .item:not(:last-of-type) {
   margin-bottom: 6px;
@@ -3071,7 +3075,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   align-items: flex-start;
   column-gap: 45px;
   flex: 1 0 0;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
 }
 @media (max-width: 1023px) {
   .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details {
