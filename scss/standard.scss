@@ -221,6 +221,24 @@ h5,
     line-height: 16px;
     justify-content: center;
   }
+  &.light-btn {
+    border-radius: 7px;
+    background: #ebeaf1;
+    color: $black;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    &:hover,
+    &:active {
+      background: $primary;
+      color: $white;
+      font-weight: 600;
+    }
+    @media (max-width: $mobileScreen) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
 }
 p {
   font-family: $sans;
