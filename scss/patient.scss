@@ -603,6 +603,13 @@ footer {
   @media (max-width: $mobileScreen) {
     width: 100%;
   }
+  &.doctor-detail-steps {
+    width: 455px;
+    .progress {
+      width: 355px;
+      left: calc(50px + 1%);
+    }
+  }
   .progress {
     height: 3px;
     width: 300px;
@@ -2307,6 +2314,35 @@ footer {
                   color: $white;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.doctor-details-page {
+  .details-card {
+    .card-body {
+      .doctor-details-step {
+        display: none;
+        &.active{
+          display: block;
+        }
+        .details-content-body {
+          height: 40px;
+          background: red;
+        }
+        .details-actions-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .btn-style {
+            &.previous-btn,&.next-btn {
+              min-width: 140px;
+              height: 50px;
+              border-radius: 5px;
             }
           }
         }

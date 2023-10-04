@@ -106,6 +106,37 @@ $(document).ready(function () {
   }
 });
 
+// doctor more details step form js start
+$(document).ready(function () {
+  var detailsBar = $(".doctor-detail-steps .progress-bar");
+  var totalSteps = $(".doctor-details-step").length;
+  var stepCircles = $(".step-circle");
+
+
+  $(".d-next").click(function () {
+    var step = $(this).data("step");
+     $(".doctor-details-step").hide();
+     $(".doctor-details-step[data-step='" + step + "']").show();
+    updatedetailProgressBar(step);
+    alert(step)
+  });
+
+  $(".d-prev").click(function () {
+    var step = $(this).data("step");
+    $(".doctor-details-step").hide();
+    $(".doctor-details-step[data-step='" + step + "']").show();
+    updatedetailProgressBar(step);
+  });
+
+  function updatedetailProgressBar(step) {
+    stepCircles.filter("[data-circle='" + step + "']").addClass("active");
+    var progress = ((step - 1) / 2) * 100;
+    detailsBar.css("width", progress + "%");
+  }
+});
+// doctor more details step form js end
+
+
 // step form form Right side step form bar js
 $(document).ready(function () {
   var currentStep = 1;

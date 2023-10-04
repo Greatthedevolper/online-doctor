@@ -1134,6 +1134,13 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
     width: 100%;
   }
 }
+.progress-bar-wrapper.doctor-detail-steps {
+  width: 455px;
+}
+.progress-bar-wrapper.doctor-detail-steps .progress {
+  width: 355px;
+  left: calc(50px + 1%);
+}
 .progress-bar-wrapper .progress {
   height: 3px;
   width: 300px;
@@ -2877,6 +2884,27 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
 }
 .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule.active > span, .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule:hover > span {
   color: #fff;
+}
+
+.doctor-details-page .details-card .card-body .doctor-details-step {
+  display: none;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step.active {
+  display: block;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body {
+  height: 40px;
+  background: red;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper .btn-style.previous-btn, .doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper .btn-style.next-btn {
+  min-width: 140px;
+  height: 50px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=patient.css.map */
