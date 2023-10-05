@@ -258,11 +258,13 @@ h5,
 p {
   font-family: "Open Sans";
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 strong {
   font-family: "Open Sans";
   display: inline-block;
+  font-weight: 600;
 }
 
 .dashboard-card {
@@ -1138,8 +1140,8 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   width: 455px;
 }
 .progress-bar-wrapper.doctor-detail-steps .progress {
-  width: 355px;
-  left: calc(50px + 1%);
+  width: 363px;
+  left: calc(42px + 0%);
 }
 .progress-bar-wrapper .progress {
   height: 3px;
@@ -2893,8 +2895,122 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   display: block;
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body {
-  height: 40px;
-  background: red;
+  padding: 38px 0 60px;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body strong {
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body > p {
+  color: #142029;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details {
+  padding: 0;
+  margin: 0;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li {
+    column-gap: 5px;
+    margin-bottom: 7px;
+  }
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li .icon-wrapper {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(139, 127, 248, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li .icon-wrapper {
+    width: 14px;
+    height: 14px;
+  }
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li .icon-wrapper img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li .icon-wrapper img {
+    width: 8.5px;
+    height: 8.5px;
+  }
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li p,
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li strong {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li p,
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li strong {
+    font-size: 10px;
+  }
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li strong {
+  font-weight: 600;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li .rating-wrapper i {
+  color: #8b7ff8;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details li .rating-wrapper i {
+    font-size: 10px;
+  }
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details .btn-style {
+  margin-top: 20px;
+  background: #8b7ff8;
+  color: #fff;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper {
+  display: grid;
+  grid-template-columns: 120px auto;
+  align-items: baseline;
+  column-gap: 5px;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .item {
+  flex-grow: 1;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .item i {
+  color: #8b7ff8;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .progres-view {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .progres-view .progress {
+  --bs-progress-height: 15px;
+  --bs-progress-bar-bg: #8b7ff8;
+  border-radius: 10px;
+  width: 95%;
+}
+.doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .progres-view span {
+  font-weight: 600;
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper {
   display: flex;

@@ -107,35 +107,58 @@ $(document).ready(function () {
 });
 
 // doctor more details step form js start
+
 $(document).ready(function () {
-  var detailsBar = $(".doctor-detail-steps .progress-bar");
-  var totalSteps = $(".doctor-details-step").length;
-  var stepCircles = $(".step-circle");
+  // Initialize the step and progress bar
+  let currentStep = 1;
+  updateProgressBar(currentStep);
 
-
+  // Next button click event
   $(".d-next").click(function () {
-    var step = $(this).data("step");
-     $(".doctor-details-step").hide();
-     $(".doctor-details-step[data-step='" + step + "']").show();
-    updatedetailProgressBar(step);
-    alert(step)
+    currentStep++;
+    updateProgressBar(currentStep);
+    showStep(currentStep);
   });
 
+  // Previous button click event
   $(".d-prev").click(function () {
-    var step = $(this).data("step");
-    $(".doctor-details-step").hide();
-    $(".doctor-details-step[data-step='" + step + "']").show();
-    updatedetailProgressBar(step);
+    currentStep--;
+    updateProgressBar(currentStep);
+    showStep(currentStep);
+    $(`.step-circle[data-circle="${currentStep + 1}"]`).removeClass("active");
   });
 
-  function updatedetailProgressBar(step) {
-    stepCircles.filter("[data-circle='" + step + "']").addClass("active");
-    var progress = ((step - 1) / 2) * 100;
-    detailsBar.css("width", progress + "%");
+  // Function to update the progress bar
+  function updateProgressBar(step) {
+    const totalSteps = 4;
+    const progressBarWidth = ((step - 1) / (totalSteps - 1)) * 100;
+    $(".progress-bar").css("width", progressBarWidth + "%");
   }
-});
-// doctor more details step form js end
 
+  // Function to show the current step and hide others
+  function showStep(step) {
+    $(".doctor-details-step").hide();
+    $(`.doctor-details-step[data-step="${step}"]`).show();
+    $(`.step-circle[data-circle="${step}"]`).addClass("active");
+
+    // Disable previous button on the first step
+    if (step === 1) {
+      $(".previous-btn").prop("disabled", true);
+    } else {
+      $(".previous-btn").prop("disabled", false);
+    }
+    if (step === 4) {
+      $(".next-btn").prop("disabled", true);
+    } else {
+      $(".next-btn").prop("disabled", false);
+    }
+  }
+
+  // Show the initial step
+  showStep(currentStep);
+});
+
+// doctor more details step form js end
 
 // step form form Right side step form bar js
 $(document).ready(function () {
