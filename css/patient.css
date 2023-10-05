@@ -100,18 +100,21 @@ h3,
 .h3 {
   font-family: "Open Sans";
   margin: 0;
+  font-weight: 600;
 }
 
 h4,
 .h4 {
   font-family: "Open Sans";
   margin: 0;
+  font-weight: 600;
 }
 
 h5,
 .h5 {
   font-family: "Open Sans";
   margin: 0;
+  font-weight: 600;
 }
 
 .btn-style {
@@ -1139,9 +1142,22 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
 .progress-bar-wrapper.doctor-detail-steps {
   width: 455px;
 }
+@media (max-width: 767px) {
+  .progress-bar-wrapper.doctor-detail-steps {
+    width: 100%;
+  }
+}
 .progress-bar-wrapper.doctor-detail-steps .progress {
   width: 363px;
   left: calc(42px + 0%);
+}
+@media (max-width: 767px) {
+  .progress-bar-wrapper.doctor-detail-steps .progress {
+    width: 82%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
 }
 .progress-bar-wrapper .progress {
   height: 3px;
@@ -1393,7 +1409,8 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
     column-gap: 12px;
   }
 }
-.profile-card #doctor-profile-form .doctor-profile-step .step-form-inner-div .form-delete-action-wrapper {
+
+.form-delete-action-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -1401,11 +1418,11 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   justify-content: center;
 }
 @media (max-width: 767px) {
-  .profile-card #doctor-profile-form .doctor-profile-step .step-form-inner-div .form-delete-action-wrapper {
+  .form-delete-action-wrapper {
     flex-direction: row;
   }
 }
-.profile-card #doctor-profile-form .doctor-profile-step .step-form-inner-div .form-delete-action-wrapper span {
+.form-delete-action-wrapper span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1415,14 +1432,14 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   border: 1px solid #ebeaf1;
   cursor: pointer;
 }
-.profile-card #doctor-profile-form .doctor-profile-step .step-form-inner-div .form-delete-action-wrapper span img {
+.form-delete-action-wrapper span img {
   width: 20px;
   height: 20px;
 }
-.profile-card #doctor-profile-form .doctor-profile-step .step-form-inner-div .form-delete-action-wrapper span:hover {
+.form-delete-action-wrapper span:hover {
   background: #7000ff;
 }
-.profile-card #doctor-profile-form .doctor-profile-step .step-form-inner-div .form-delete-action-wrapper span:hover img {
+.form-delete-action-wrapper span:hover img {
   filter: brightness(0) invert(1);
 }
 
@@ -2689,6 +2706,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
     column-gap: 14px;
     padding: 15px;
     border-radius: 5px;
+    margin-bottom: 30px;
   }
 }
 .favourite-doctor-details-wrapper .favourit-doctor-details:hover, .favourite-doctor-details-wrapper .favourit-doctor-details.active, .favourite-doctor-details-wrapper .favourit-doctor-details:focus, .favourite-doctor-details-wrapper .favourit-doctor-details:active {
@@ -2868,18 +2886,34 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   flex-grow: 1;
   flex-basis: 105px;
   max-width: 109px;
-  padding: 9px 16px;
+  height: 34px;
   border-radius: 5px;
+  padding: 5px;
   border: 0.5px solid #8b7ff8;
   background: rgba(139, 127, 248, 0.1);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule {
+    flex-basis: 100%;
+    max-width: 60px;
+    height: 24px;
+  }
 }
 .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule > span {
   color: #8b7ff8;
   font-size: 16px;
   font-weight: 600;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule > span {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule.active, .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule:hover {
   background: #8b7ff8;
@@ -2904,11 +2938,25 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   line-height: 22px;
   margin-bottom: 15px;
 }
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body strong {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+}
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body > p {
   color: #142029;
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body > p {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 15px;
+  }
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .more-details {
   padding: 0;
@@ -2986,16 +3034,34 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   display: grid;
   grid-template-columns: 120px auto;
   align-items: baseline;
-  column-gap: 5px;
+  gap: 5px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper {
+    grid-template-columns: auto;
+    gap: 10px;
+  }
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper:not(:last-of-type) {
   margin-bottom: 25px;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .item {
   flex-grow: 1;
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .item i {
   color: #8b7ff8;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .item i {
+    font-size: 14px;
+  }
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .progres-view {
   width: 100%;
@@ -3009,8 +3075,20 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   border-radius: 10px;
   width: 95%;
 }
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .progres-view .progress {
+    --bs-progress-height: 10px;
+  }
+}
 .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .progres-view span {
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  .doctor-details-page .details-card .card-body .doctor-details-step .details-content-body .review-main-wrapper .review-wrapper .progres-view span {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 .doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper {
   display: flex;
@@ -3024,6 +3102,110 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   min-width: 140px;
   height: 50px;
   border-radius: 5px;
+}
+
+.patient-profile-main-wrapper {
+  padding: 70px 0;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .patient-profile-main-wrapper .patient-profile-inner-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .img-main-wrapper h3 {
+  color: #142029;
+  font-size: 22px;
+  line-height: 22px;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .img-main-wrapper .img-wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 7px;
+  margin: 18px 0 15px;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .img-main-wrapper .img-wrapper img {
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .img-main-wrapper .btn-style {
+  width: 150px;
+  height: 40px;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper {
+  flex-grow: 1;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper h3 {
+  color: #142029;
+  font-size: 21px;
+  line-height: 22px;
+  margin: 60px 0 30px;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+@media (max-width: 767px) {
+  .patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper {
+    flex-direction: column;
+  }
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div {
+  flex-grow: 1;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding: 30px 30px 5px;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div.form .form-group {
+  position: relative;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div.form .form-group label {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  background: #fff;
+  padding: 5px;
+  z-index: 2;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div.form .form-group .form-control {
+  height: 50px;
+}
+@media (max-width: 767px) {
+  .patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div.form .form-group .form-control {
+    height: 40px;
+  }
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div.form .form-group .form-control:focus {
+  box-shadow: none;
+  border: 1px solid #7000ff;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div.form .form-group span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .content-wrapper .profile-inner-div.form .form-group:has(.form-control:focus) span i {
+  color: #8b7ff8;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .form-btn-wrapper {
+  margin: 60px 0 0 0;
+  text-align: center;
+}
+.patient-profile-main-wrapper .patient-profile-inner-wrapper .content-main-wrapper .form-btn-wrapper .btn-style {
+  height: 52px;
+  width: 162px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
 }
 
 /*# sourceMappingURL=patient.css.map */
