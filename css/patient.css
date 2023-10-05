@@ -3017,6 +3017,9 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   align-items: center;
   justify-content: center;
 }
+.doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper .btn-style {
+  margin: 0 5px;
+}
 .doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper .btn-style.previous-btn, .doctor-details-page .details-card .card-body .doctor-details-step .details-actions-wrapper .btn-style.next-btn {
   min-width: 140px;
   height: 50px;
