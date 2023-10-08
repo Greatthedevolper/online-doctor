@@ -384,6 +384,12 @@ strong {
   border: 1px solid #7000ff;
   border-radius: 7px;
 }
+.form .form-group:has(.form-control:focus) label, .form .form-group:has(.form-select:focus) label {
+  color: #8b7ff8;
+}
+.form .form-group:has(.form-control:focus) span i, .form .form-group:has(.form-select:focus) span i {
+  color: #8b7ff8;
+}
 .form .agree-wrapper {
   display: flex;
   align-items: center;
@@ -546,6 +552,42 @@ strong {
 }
 .owl-nav .owl-next:after {
   transform: translate(-21%, -53%);
+}
+
+.upload-wrapper {
+  text-align: center;
+}
+.upload-wrapper .upload-label {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 20px;
+  width: 500px;
+  height: 60px;
+  border-radius: 7px;
+  border: 1px solid #818181;
+  padding: 12px;
+  margin: 20px auto;
+  position: relative;
+  cursor: pointer;
+}
+.upload-wrapper .upload-label input[type=file] {
+  display: none;
+}
+.upload-wrapper .upload-label p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.upload-wrapper .upload-label .btn-style {
+  background: #8b7ff8;
+  color: #fff;
+  width: 96px;
+  height: 36px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 header {
@@ -2514,149 +2556,6 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
     flex-direction: column;
   }
 }
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details {
-  border-radius: 10px;
-  padding: 30px;
-  display: flex;
-  align-items: flex-start;
-  column-gap: 45px;
-  flex: 1 0 0;
-  border: 1px solid #d9d9d9;
-}
-@media (max-width: 1023px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details {
-    column-gap: 14px;
-    padding: 15px;
-    border-radius: 5px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details:hover, .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details.active, .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details:focus, .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details:active {
-  border: 1px solid #000;
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .img-wrapper {
-  width: 170px;
-  height: 170px;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .img-wrapper {
-    width: 70px;
-    height: 70px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .img-wrapper img {
-  width: 100%;
-  height: 100%;
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1 0 0;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper {
-    flex-direction: column;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper h3 {
-  color: #000;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 22px;
-  margin-bottom: 10px;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper h3 {
-    font-size: 14px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details {
-  padding: 0;
-  margin: 0;
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  margin-bottom: 10px;
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li:last-of-type {
-  margin-top: 10px;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li {
-    column-gap: 5px;
-    margin-bottom: 7px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: rgba(139, 127, 248, 0.1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper {
-    width: 14px;
-    height: 14px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper img {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper img {
-    width: 8.5px;
-    height: 8.5px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li p,
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li strong {
-  color: #000;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li p,
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li strong {
-    font-size: 10px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li strong {
-  font-weight: 600;
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .rating-wrapper i {
-  color: #8b7ff8;
-  font-size: 18px;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .rating-wrapper i {
-    font-size: 10px;
-  }
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .action-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .action-wrapper .btn-style {
-  min-width: 228px;
-  border-radius: 7px;
-}
-@media (max-width: 767px) {
-  .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-details .content-wrapper .action-wrapper .btn-style {
-    min-width: 140px;
-    height: 34px;
-  }
-}
 .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-action {
   display: flex;
   flex-direction: column;
@@ -2688,6 +2587,154 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
 }
 .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-action span:hover img, .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-action span.active img, .favourite-doctor-wrapper .favourite-doctor-item .favourit-doctor-action span:active img {
   filter: brightness(0) invert(1);
+}
+
+.favourit-doctor-details {
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 45px;
+  flex: 1 0 0;
+  border: 1px solid #d9d9d9;
+}
+@media (max-width: 1023px) {
+  .favourit-doctor-details {
+    column-gap: 14px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+.favourit-doctor-details:hover, .favourit-doctor-details.active, .favourit-doctor-details:focus, .favourit-doctor-details:active {
+  border: 1px solid #000;
+}
+.favourit-doctor-details .img-wrapper {
+  width: 170px;
+  height: 170px;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .img-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+}
+.favourit-doctor-details .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.favourit-doctor-details .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 0 0;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper {
+    flex-direction: column;
+  }
+}
+.favourit-doctor-details .content-wrapper .details-wrapper h3 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper .details-wrapper h3 {
+    font-size: 14px;
+  }
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details {
+  padding: 0;
+  margin: 0;
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 10px;
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li:last-of-type {
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper .details-wrapper .more-details li {
+    column-gap: 5px;
+    margin-bottom: 7px;
+  }
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(139, 127, 248, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper {
+    width: 14px;
+    height: 14px;
+  }
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .icon-wrapper img {
+    width: 8.5px;
+    height: 8.5px;
+  }
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li p,
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li strong {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper .details-wrapper .more-details li p,
+  .favourit-doctor-details .content-wrapper .details-wrapper .more-details li strong {
+    font-size: 10px;
+  }
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li strong {
+  font-weight: 600;
+}
+.favourit-doctor-details .content-wrapper .details-wrapper .more-details li .rating-wrapper i {
+  color: #8b7ff8;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper .details-wrapper .more-details li .rating-wrapper i {
+    font-size: 10px;
+  }
+}
+.favourit-doctor-details .content-wrapper .action-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.favourit-doctor-details .content-wrapper .action-wrapper .btn-style {
+  min-width: 228px;
+  border-radius: 7px;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details .content-wrapper .action-wrapper .btn-style {
+    min-width: 140px;
+    height: 34px;
+  }
+}
+.favourit-doctor-details.book-appointment {
+  width: 650px;
+  margin: 0 auto;
 }
 
 .favourite-doctor-details-wrapper {
@@ -3206,6 +3253,75 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   font-size: 18px;
   font-weight: 600;
   line-height: 18px;
+}
+
+.patient-book-appointment-wrapper {
+  padding-top: 54px;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form {
+  margin-top: 90px;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper {
+  margin-bottom: 60px;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group {
+  position: relative;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group label {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  background: #fff;
+  padding: 5px;
+  z-index: 2;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control {
+  height: 50px;
+}
+@media (max-width: 767px) {
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control {
+    height: 40px;
+  }
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control:focus {
+  box-shadow: none;
+  border: 1px solid #7000ff;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-select.map-select {
+  background-position: right 3.75rem center;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  border-radius: 5px;
+  background: #818181;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group span i {
+  color: #fff;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .add-new-report {
+  display: block;
+  color: #8b7ff8;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  width: 500px;
+  margin: 0 auto;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .book-actions-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .book-actions-wrapper .btn-style {
+  min-width: 140px;
+  height: 50px;
 }
 
 /*# sourceMappingURL=patient.css.map */

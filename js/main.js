@@ -160,6 +160,61 @@ $(document).ready(function () {
 
 // doctor more details step form js end
 
+
+// doctor more details step form js start
+
+$(document).ready(function () {
+  // Initialize the step and progress bar
+  let currentStep = 1;
+  updateProgress(currentStep);
+
+  // Next button click event
+  $(".p-next").click(function () {
+    currentStep++;
+    updateProgress(currentStep);
+    getStep(currentStep);
+  });
+
+  // Previous button click event
+  $(".p-prev").click(function () {
+    currentStep--;
+    updateProgress(currentStep);
+    getStep(currentStep);
+    $(`.step-circle[data-circle="${currentStep + 1}"]`).removeClass("active");
+  });
+
+  // Function to update the progress bar
+  function updateProgress(step) {
+    const totalSteps = 3;
+    const progressBarWidth = ((step - 1) / (totalSteps - 1)) * 100;
+    $(".progress-bar").css("width", progressBarWidth + "%");
+  }
+
+  // Function to show the current step and hide others
+  function getStep(step) {
+    $(".patient-book-appointment-step").hide();
+    $(`.patient-book-appointment-step[data-step="${step}"]`).show();
+    $(`.step-circle[data-circle="${step}"]`).addClass("active");
+
+    // Disable previous button on the first step
+    if (step === 1) {
+      $(".previous-btn").prop("disabled", true);
+    } else {
+      $(".previous-btn").prop("disabled", false);
+    }
+    if (step === 4) {
+      $(".next-btn").prop("disabled", true);
+    } else {
+      $(".next-btn").prop("disabled", false);
+    }
+  }
+
+  // Show the initial step
+  getStep(currentStep);
+});
+
+// doctor more details step form js end
+
 // step form form Right side step form bar js
 $(document).ready(function () {
   var currentStep = 1;
