@@ -15,9 +15,9 @@
       <header>
         <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-6">
+            <div class="col-md-6 col-8">
               <div
-                class="d-flex align-items-center column-gap-3 custom-breadcrum"
+                class="d-flex align-items-center column-gap-md-3 column-gap-1 custom-breadcrum"
               >
                 <a href="../index.html"
                   ><i class="fa-solid fa-arrow-left text-dark"></i
@@ -26,7 +26,7 @@
                 <h1 class="small text-dark">Patient Details</h1>
               </div>
             </div>
-            <div class="col-6 text-end">
+            <div class="col-md-6 col-4 text-end">
               <a href="#" class="logo">
                 <img src="../images/logo.svg" alt="logo" />
               </a>
@@ -79,7 +79,7 @@
           </div>
           <div class="patient-book-appoinment-step-form">
             <div class="card details-card mt-3 border-0">
-              <div class="card-body">
+              <div class="card-body px-1">
                 <div class="progress-bar-wrapper patient-appointment">
                   <div class="progress">
                     <div
@@ -107,7 +107,7 @@
                     </li>
                   </ul>
                 </div>
-                <form action="" class="form">
+                <form action="" class="form" onSubmit="return false">
                   <!-- step-1 start -->
                   <div class="patient-book-appointment-step" data-step="1">
                     <div class="container-fluid">
@@ -174,7 +174,7 @@
                               />
                             </div>
                           </div>
-                          <div class="col-md-6">  
+                          <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Address</label>
                               <select
@@ -186,19 +186,15 @@
                                 <option>For Me</option>
                                 <option>For Me</option>
                               </select>
-                              <span><i class="fa-solid fa-location-dot"></i></span>
+                              <span
+                                ><i class="fa-solid fa-location-dot"></i
+                              ></span>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
-                              <label for=""
-                                >Select Test Data</label
-                              >
-                              <select
-                                name=""
-                                id=""
-                                class="form-select"
-                              >
+                              <label for="">Select Test Data</label>
+                              <select name="" id="" class="form-select">
                                 <option slected>Select Here</option>
                                 <option>For Me</option>
                                 <option>For Me</option>
@@ -208,7 +204,9 @@
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
-                              <label for="">Any Side Effects Of The Drug?</label>
+                              <label for=""
+                                >Any Side Effects Of The Drug?</label
+                              >
 
                               <input
                                 type="text"
@@ -230,16 +228,22 @@
                           </div>
                         </div>
                       </div>
-                      <h3 class="text-center ">Upload Patient Image & Report</h3>
+                      <h3 class="text-center">Upload Patient Image & Report</h3>
                       <div class="upload-wrapper">
                         <div class="form-group mb-0">
-                          <label for="upload-patient-report" class="upload-label">
-                            <input type="file" id="upload-patient-report">
+                          <label
+                            for="upload-patient-report"
+                            class="upload-label"
+                          >
+                            <input type="file" id="upload-patient-report" />
                             <span>
-                              <img src="../images/icons/camera-icon.svg" alt="">
+                              <img
+                                src="../images/icons/camera-icon.svg"
+                                alt=""
+                              />
                             </span>
                             <p>Patient Test Report</p>
-                            <button class="btn-style ">Upload</button>
+                            <button class="btn-style">Upload</button>
                           </label>
                         </div>
                       </div>
@@ -265,7 +269,84 @@
                   <!-- step-2 start -->
                   <div class="patient-book-appointment-step" data-step="2">
                     <div class="container-fluid">
-                      2
+                      <div class="appointment-details-wrapper">
+                        <div class="row">
+                          <div class="col-md-6 mx-auto">
+                            <div class="form-group">
+                              <label for="">Patient Age</label>
+
+                              <input
+                                type="date"
+                                class="form-control"
+                                placeholder="Type Here..."
+                              />
+                              <span class="bg-transparent">
+                                <img
+                                  src="../images/icons/calendar-icon.svg"
+                                  alt=""
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="time-badge-wrapper book-appointment">
+                          <span class="time-capsule active">
+                            <span>8:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:15 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:20 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:25 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:30 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:35 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:40 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:45 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:50 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>8:55 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          <span class="time-capsule">
+                            <span>9:00 PM</span>
+                          </span>
+                          
+                        </div>
+                      </div>
                       <div class="book-actions-wrapper">
                         <button
                           class="btn-style previous-btn p-prev"
@@ -284,7 +365,39 @@
                   <!-- step-3 start -->
                   <div class="patient-book-appointment-step" data-step="3">
                     <div class="container-fluid">
-                      3
+                      <div class="appointment-details-wrapper">
+                        <div class="row">
+                          <div class="col-md-6 ">
+                            <div class="form-group">
+                              <label for="">Offer Code</label>
+
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Type Here..."
+                              />
+                              
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="appointment-for"
+                                >Payment Method</label
+                              >
+                              <select
+                                name=""
+                                id="appointment-for"
+                                class="form-select"
+                              >
+                                <option slected>For Me</option>
+                                <option>For Me</option>
+                                <option>For Me</option>
+                                <option>For Me</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <div class="book-actions-wrapper">
                         <button
                           class="btn-style previous-btn p-prev"
@@ -292,7 +405,7 @@
                         >
                           Back
                         </button>
-                        <button class="btn-style next-btn">Next</button>
+                        <button class="btn-style next-btn" type="submit">Confirm Pay</button>
                       </div>
                     </div>
                   </div>

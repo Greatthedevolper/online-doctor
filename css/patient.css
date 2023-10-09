@@ -69,7 +69,7 @@ h1.small,
 @media (max-width: 767px) {
   h1.small,
   .h1.small {
-    font-size: 14px;
+    font-size: 10px;
     line-height: 14px;
   }
 }
@@ -570,6 +570,11 @@ strong {
   position: relative;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .upload-wrapper .upload-label {
+    width: 100%;
+  }
+}
 .upload-wrapper .upload-label input[type=file] {
   display: none;
 }
@@ -578,6 +583,11 @@ strong {
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  .upload-wrapper .upload-label p {
+    display: none;
+  }
 }
 .upload-wrapper .upload-label .btn-style {
   background: #8b7ff8;
@@ -2733,8 +2743,13 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   }
 }
 .favourit-doctor-details.book-appointment {
-  width: 650px;
+  max-width: 650px;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .favourit-doctor-details.book-appointment {
+    max-width: 100%;
+  }
 }
 
 .favourite-doctor-details-wrapper {
@@ -2864,7 +2879,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   line-height: 20px;
 }
 .favourite-doctor-details-wrapper .doctor-availability .card-body {
-  padding: 0;
+  padding: 10px 0;
   border: 1px solid #000;
   border-radius: 0 0 10px 10px;
   border-top: none;
@@ -2921,7 +2936,8 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   font-weight: 600;
   line-height: 16px;
 }
-.favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper {
+
+.time-badge-wrapper {
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -2929,7 +2945,7 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   flex-wrap: wrap;
   gap: 15px;
 }
-.favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule {
+.time-badge-wrapper .time-capsule {
   flex-grow: 1;
   flex-basis: 105px;
   max-width: 109px;
@@ -2944,29 +2960,33 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule {
+  .time-badge-wrapper .time-capsule {
     flex-basis: 100%;
     max-width: 60px;
     height: 24px;
   }
 }
-.favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule > span {
+.time-badge-wrapper .time-capsule > span {
   color: #8b7ff8;
   font-size: 16px;
   font-weight: 600;
   line-height: 16px;
 }
 @media (max-width: 767px) {
-  .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule > span {
+  .time-badge-wrapper .time-capsule > span {
     font-size: 10px;
     line-height: 10px;
   }
 }
-.favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule.active, .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule:hover {
+.time-badge-wrapper .time-capsule.active, .time-badge-wrapper .time-capsule:hover {
   background: #8b7ff8;
 }
-.favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule.active > span, .favourite-doctor-details-wrapper .doctor-availability .card-body #availability-tab-Content .tab-pane .time-badge-wrapper .time-capsule:hover > span {
+.time-badge-wrapper .time-capsule.active > span, .time-badge-wrapper .time-capsule:hover > span {
   color: #fff;
+}
+.time-badge-wrapper.book-appointment {
+  max-width: 704px;
+  margin: 0 auto;
 }
 
 .doctor-details-page .details-card .card-body .doctor-details-step {
@@ -3261,6 +3281,11 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form {
   margin-top: 90px;
 }
+@media (max-width: 767px) {
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form {
+    margin-top: 30px;
+  }
+}
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper {
   margin-bottom: 60px;
 }
@@ -3275,20 +3300,29 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   padding: 5px;
   z-index: 2;
 }
-.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control {
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control,
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-select {
   height: 50px;
 }
 @media (max-width: 767px) {
-  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control {
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control,
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-select {
     height: 40px;
+    font-size: 12px;
   }
 }
-.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control:focus {
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-control:focus,
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-select:focus {
   box-shadow: none;
   border: 1px solid #7000ff;
 }
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-select.map-select {
   background-position: right 3.75rem center;
+}
+@media (max-width: 767px) {
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group .form-select.map-select {
+    background-position: right 2.2rem center;
+  }
 }
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group span {
   position: absolute;
@@ -3302,9 +3336,20 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group span {
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+  }
 }
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group span i {
   color: #fff;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .appointment-details-wrapper .form-group input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
 }
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .add-new-report {
   display: block;
@@ -3315,6 +3360,11 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
   width: 500px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .add-new-report {
+    width: 100%;
+  }
+}
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .book-actions-wrapper {
   text-align: center;
   margin-top: 60px;
@@ -3322,6 +3372,14 @@ footer .footer-bottom .footer-social-links li a.whtsapp {
 .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .book-actions-wrapper .btn-style {
   min-width: 140px;
   height: 50px;
+}
+.patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .book-actions-wrapper .btn-style:not(:last-of-type) {
+  margin: 0 20px 0 0;
+}
+@media (max-width: 767px) {
+  .patient-book-appointment-wrapper .patient-book-appoinment-step-form .details-card .form .patient-book-appointment-step .book-actions-wrapper .btn-style:not(:last-of-type) {
+    margin: 0 0 20px 0;
+  }
 }
 
 /*# sourceMappingURL=patient.css.map */

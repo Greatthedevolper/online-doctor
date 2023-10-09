@@ -2109,8 +2109,11 @@ footer {
     }
   }
   &.book-appointment {
-    width: 650px;
+    max-width: 650px;
     margin: 0 auto;
+    @media (max-width: $mobileScreen) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -2241,7 +2244,7 @@ footer {
       }
     }
     .card-body {
-      padding: 0;
+      padding: 10px 0;
       border: 1px solid $black;
       border-radius: 0 0 10px 10px;
       border-top: none;
@@ -2299,53 +2302,57 @@ footer {
             font-weight: 600;
             line-height: 16px;
           }
-          .time-badge-wrapper {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            .time-capsule {
-              flex-grow: 1;
-              flex-basis: 105px;
-              max-width: 109px;
-              height: 34px;
-              border-radius: 5px;
-              padding: 5px;
-              border: 0.5px solid #8b7ff8;
-              background: rgba(139, 127, 248, 0.1);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              cursor: pointer;
-              @media (max-width: $mobileScreen) {
-                flex-basis: 100%;
-                max-width: 60px;
-                height: 24px;
-              }
-              > span {
-                color: $primary;
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 16px;
-                @media (max-width: $mobileScreen) {
-                  font-size: 10px;
-                  line-height: 10px;
-                }
-              }
-              &.active,
-              &:hover {
-                background: $primary;
-                > span {
-                  color: $white;
-                }
-              }
-            }
-          }
         }
       }
     }
+  }
+}
+.time-badge-wrapper {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  .time-capsule {
+    flex-grow: 1;
+    flex-basis: 105px;
+    max-width: 109px;
+    height: 34px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 0.5px solid #8b7ff8;
+    background: rgba(139, 127, 248, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @media (max-width: $mobileScreen) {
+      flex-basis: 100%;
+      max-width: 60px;
+      height: 24px;
+    }
+    > span {
+      color: $primary;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+      @media (max-width: $mobileScreen) {
+        font-size: 10px;
+        line-height: 10px;
+      }
+    }
+    &.active,
+    &:hover {
+      background: $primary;
+      > span {
+        color: $white;
+      }
+    }
+  }
+  &.book-appointment {
+    max-width: 704px;
+    margin: 0 auto;
   }
 }
 
@@ -2634,6 +2641,9 @@ footer {
   padding-top: 54px;
   .patient-book-appoinment-step-form {
     margin-top: 90px;
+    @media (max-width: $mobileScreen) {
+      margin-top: 30px;
+    }
     .details-card {
       .form {
         .patient-book-appointment-step {
@@ -2649,10 +2659,12 @@ footer {
                 padding: 5px;
                 z-index: 2;
               }
-              .form-control {
+              .form-control,
+              .form-select {
                 height: 50px;
                 @media (max-width: $mobileScreen) {
                   height: 40px;
+                  font-size: 12px;
                 }
                 &:focus {
                   box-shadow: none;
@@ -2662,6 +2674,9 @@ footer {
               .form-select {
                 &.map-select {
                   background-position: right 3.75rem center;
+                  @media (max-width: $mobileScreen) {
+                    background-position: right 2.2rem center;
+                  }
                 }
               }
               span {
@@ -2676,8 +2691,19 @@ footer {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
+                font-size: 18px;
+                @media (max-width: $mobileScreen) {
+                  font-size: 12px;
+                  width: 25px;
+                  height: 25px;
+                }
                 i {
                   color: $white;
+                }
+              }
+              input[type="date"] {
+                &::-webkit-calendar-picker-indicator {
+                  display: none;
                 }
               }
             }
@@ -2690,13 +2716,23 @@ footer {
             line-height: 16px;
             width: 500px;
             margin: 0 auto;
+             @media (max-width: $mobileScreen) {
+              width: 100%;
+             }
           }
           .book-actions-wrapper {
             text-align: center;
             margin-top: 60px;
-            .btn-style{
+            .btn-style {
               min-width: 140px;
               height: 50px;
+              &:not(:last-of-type) {
+                margin:0 20px 0 0;
+                @media (max-width: $mobileScreen) {
+                    margin:0 0 20px 0;
+
+                  }
+              }
             }
           }
         }

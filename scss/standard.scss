@@ -64,8 +64,13 @@ h1,
     line-height: 20px;
 
     @media (max-width: $mobileScreen) {
-      font-size: 14px;
+      font-size: 10px;
       line-height: 14px;
+      // display: -webkit-box;
+      // -webkit-box-orient: vertical;
+      // -webkit-line-clamp: 1;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
     }
   }
 }
@@ -375,6 +380,9 @@ strong {
         i {
           color: #8b7ff8;
         }
+        // img {
+        //   filter: blur(red);
+        // }
       }
     }
   }
@@ -566,6 +574,9 @@ strong {
     margin: 20px auto;
     position: relative;
     cursor: pointer;
+    @media (max-width: $mobileScreen) {
+      width: 100%;
+    }
     input[type="file"] {
       display: none;
     }
@@ -574,8 +585,11 @@ strong {
       font-size: 16px;
       font-weight: 400;
       line-height: 16px;
+      @media (max-width: $mobileScreen) {
+      display: none;
     }
-    .btn-style{
+    }
+    .btn-style {
       background: $primary;
       color: $white;
       width: 96px;
